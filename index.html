@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+<title>Conrad–Scott Family History</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: a leather-bound family record in the "Blessed With This Time Together" style. A cover, a contents page, then gold-framed parchment pages with running heads and folios. */
+:root{
+  --desk:#CDBB8E; --paper:#F3E6C6; --paper-2:#EADAB3; --ink:#2C2418; --muted:#6B5F4D; --rule:#D2BC8A;
+  --gold:#B08A3A; --green:#1F4A37; --maroon:#7B2730; --leather:#4A2C19; --leather-hi:#6E4428; --leather-ink:#E6C77E;
+  --sea:#D3DBD0; --sea-ink:#71878A;
+  --scott:#2B4F7A; --hunt:#4B6A2A; --conrad:#7A3A5C; --fleming:#94660F; --living:#8C8370;
+  --display:"Zilla Slab","Rockwell","Roboto Slab",Georgia,serif;
+  --body:"Source Serif 4","Iowan Old Style",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --desk:#15100B; --paper:#241C13; --paper-2:#2E2418; --ink:#EDE2C8; --muted:#B3A585; --rule:#4A3C26;
+  --gold:#C9A24B; --green:#A3CDB0; --maroon:#E39AA0; --leather:#3A2213; --leather-hi:#5A3820; --leather-ink:#E6C77E;
+  --sea:#1C2A2C; --sea-ink:#6E8F95;
+  --scott:#8DB3DE; --hunt:#A9C77A; --conrad:#D99BBC; --fleming:#E2B65E; --living:#8F8670; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --desk:#15100B; --paper:#241C13; --paper-2:#2E2418; --ink:#EDE2C8; --muted:#B3A585; --rule:#4A3C26;
+  --gold:#C9A24B; --green:#A3CDB0; --maroon:#E39AA0; --leather:#3A2213; --leather-hi:#5A3820; --leather-ink:#E6C77E;
+  --sea:#1C2A2C; --sea-ink:#6E8F95;
+  --scott:#8DB3DE; --hunt:#A9C77A; --conrad:#D99BBC; --fleming:#E2B65E; --living:#8F8670; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(56px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--desk);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.62;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 40px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--leather)}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;text-wrap:balance;line-height:1.15;margin:0}
+.yrs,.num{font-variant-numeric:tabular-nums}
+
+/* leather contents bar */
+nav.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--leather);
+  margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:2px solid var(--gold)}
+nav.bar .in{max-width:940px;margin:0 auto;display:flex;align-items:center;gap:4px 18px;min-height:48px;flex-wrap:wrap}
+nav.bar .brand{font-family:var(--display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--leather-ink);margin-right:auto}
+nav.bar a{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#E9DCC0;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav.bar a:hover,nav.bar a:focus-visible{color:var(--leather-ink);border-bottom-color:var(--leather-ink);outline:none}
+
+/* the book */
+.book{max-width:940px;margin:28px auto 0;display:grid;grid-template-columns:minmax(0,1fr);gap:30px}
+.page{position:relative;background:var(--paper);box-shadow:0 12px 30px rgba(40,24,10,.28);border-left:16px solid var(--leather);
+  background-image:radial-gradient(ellipse at 18% 8%,rgba(255,255,255,.28),transparent 55%),radial-gradient(ellipse at 92% 96%,rgba(139,111,58,.14),transparent 60%)}
+.page::before{content:"";position:absolute;top:0;bottom:0;left:-16px;width:16px;background:linear-gradient(90deg,var(--leather) 0,var(--leather-hi) 55%,var(--leather) 100%)}
+.frame{margin:14px;border:3px double var(--gold);outline:1px solid var(--rule);outline-offset:-9px;padding:24px 44px 18px;position:relative;min-width:0}
+@media (max-width:640px){.page{border-left-width:8px}.page::before{left:-8px;width:8px}.frame{margin:8px;padding:20px 18px 14px}}
+.fl{position:absolute;width:34px;height:34px;color:var(--gold)}
+.fl.tl{top:-3px;left:-3px}.fl.tr{top:-3px;right:-3px;transform:scaleX(-1)}.fl.bl{bottom:-3px;left:-3px;transform:scaleY(-1)}.fl.br{bottom:-3px;right:-3px;transform:scale(-1,-1)}
+.runhead{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--gold);padding:4px 18px 8px;margin-bottom:26px}
+.folio{text-align:center;font-family:var(--display);font-size:12px;color:var(--muted);margin-top:26px}
+
+/* page heads, after the PDF */
+.phead{text-align:center;display:grid;gap:8px;justify-items:center;margin-bottom:22px}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon)}
+.phead h2{font-size:clamp(30px,5vw,44px);color:var(--green)}
+.phead .where{font-style:italic;color:var(--muted);font-size:16.5px;max-width:60ch}
+.phead .lead{color:var(--muted);max-width:62ch;margin:0}
+.grule{width:180px;height:1px;background:var(--gold);margin-top:6px}
+.orn{color:var(--gold);font-size:14px;letter-spacing:.6em}
+.prose{max-width:68ch;margin-inline:auto}
+.prose p{margin:0 0 14px}
+
+/* cover */
+.cover{display:grid;grid-template-columns:120px minmax(0,1fr);background:var(--leather);box-shadow:0 18px 40px rgba(30,16,6,.4);max-width:720px;margin-inline:auto;width:100%}
+.spine{background:linear-gradient(90deg,var(--leather) 0,var(--leather-hi) 48%,var(--leather) 100%);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:22px 6px;color:var(--leather-ink);gap:16px;border-right:3px solid #2A170B}
+.spine .band{width:80%;border-top:2px solid var(--leather-ink);border-bottom:2px solid var(--leather-ink);height:7px;opacity:.75}
+.spine .vt{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--display);font-weight:700;letter-spacing:.2em;font-size:13px;text-transform:uppercase}
+.spine .yr{font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.14em;text-align:center;line-height:1.7}
+.cover-face{background:var(--paper);margin:10px 10px 10px 0;border:3px double var(--gold);outline:1px solid var(--rule);outline-offset:-9px;position:relative;padding:28px 30px 30px;display:grid;gap:20px;justify-items:center;min-width:0}
+.cover-face .top{font-family:var(--display);font-weight:600;letter-spacing:.26em;font-size:12px;color:var(--green);text-transform:uppercase;text-align:center}
+.cover-face figure{margin:0;width:100%;border:3px double var(--gold);padding:6px;background:var(--paper-2)}
+.cover-face figure img{display:block;width:100%;height:260px;object-fit:cover;object-position:50% 88%;filter:sepia(55%) contrast(1.05)}
+.cover-face figcaption{font-size:12px;color:var(--muted);font-style:italic;text-align:center;padding-top:6px}
+.titlebox{width:100%;border:1px solid var(--gold);background:var(--paper-2);padding:24px 18px;display:grid;gap:10px;justify-items:center;text-align:center}
+.titlebox h1{font-size:clamp(30px,6vw,46px);color:var(--green);letter-spacing:.02em;text-transform:uppercase}
+.titlebox .sub{font-family:var(--display);font-weight:700;color:var(--maroon);letter-spacing:.16em;font-size:12.5px;text-transform:uppercase}
+.titlebox .tag{font-style:italic;color:var(--muted);font-size:15px}
+.titlebox .date{font-family:var(--display);font-weight:700;color:var(--maroon);letter-spacing:.14em;font-size:12px;margin-top:10px}
+@media (max-width:560px){.cover{grid-template-columns:44px minmax(0,1fr)}.spine .vt{font-size:10px}.spine .yr{display:none}.cover-face{padding:20px 14px}.cover-face figure img{height:190px}}
+
+/* contents */
+.toc{list-style:none;margin:0 auto;padding:0;max-width:640px}
+.toc a{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:11px 4px;border-bottom:1px dotted var(--rule);text-decoration:none}
+.toc a:hover .tt,.toc a:focus-visible .tt{color:var(--maroon)}
+.toc a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.toc .rn{font-family:var(--display);font-weight:700;color:var(--maroon)}
+.toc .tt{font-family:var(--display);font-weight:600;font-size:18px;color:var(--green)}
+.toc .pg{font-size:13px;color:var(--muted)}
+.toc .sub{display:block;font-family:var(--body);font-weight:400;font-style:italic;font-size:14px;color:var(--muted)}
+
+/* opener */
+.origins{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px double var(--gold);border-bottom:3px double var(--gold);margin:22px auto 0;max-width:720px}
+.origins div{text-align:center;padding:14px 6px;border-left:1px solid var(--rule)}
+.origins div:first-child{border-left:0}
+.origins b{display:block;font-family:var(--display);font-size:28px;color:var(--green)}
+.origins span{font-size:13px;color:var(--muted)}
+@media (max-width:560px){.origins{grid-template-columns:repeat(2,minmax(0,1fr))}.origins div:nth-child(3){border-left:0}.origins div:nth-child(n+3){border-top:1px solid var(--rule)}}
+.dropcap::first-letter{font-family:var(--display);font-weight:700;float:left;font-size:3.6em;line-height:.82;padding:6px 8px 0 0;color:var(--green)}
+
+/* map */
+.map-box{overflow-x:auto;border:3px double var(--gold);padding:6px;background:var(--paper-2)}
+.map-box svg{display:block;width:100%;min-width:760px;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:12px;font-size:14px;justify-content:center}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{display:inline-block;width:22px;height:4px;border-radius:2px}
+
+/* tree */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;justify-content:center}
+.chip{font:600 13px var(--display);letter-spacing:.05em;border:1px solid var(--gold);background:var(--paper-2);color:var(--ink);padding:6px 14px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.chip[aria-pressed="true"]{background:var(--green);color:var(--paper);border-color:var(--green)}
+.chip:focus-visible{outline:2px solid var(--maroon);outline-offset:2px}
+.tree-grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:16px;align-items:start}
+@media (max-width:900px){.tree-grid{grid-template-columns:minmax(0,1fr)}}
+.tree-scroll{overflow:auto;max-height:72vh;border:3px double var(--gold);background:var(--paper-2)}
+.tree-scroll svg{display:block}
+.node{cursor:pointer}
+.node rect.box{fill:var(--paper);stroke-width:1.5}
+.node.sel rect.box{stroke-width:3}
+.node:focus{outline:none}
+.node:focus-visible rect.box{stroke-width:3}
+.node text{fill:var(--ink)}
+.node .yrs{fill:var(--muted);font-family:var(--body);font-size:11px}
+.node .nm{font-family:var(--body);font-size:13px;font-weight:600}
+.link{fill:none;stroke:var(--gold);stroke-width:1.3;opacity:.8}
+aside.detail{border:1px solid var(--gold);background:var(--paper-2);padding:18px;display:grid;gap:10px;min-width:0}
+aside.detail h3{font-size:22px;color:var(--green)}
+aside.detail .rel{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+aside.detail p{margin:0;font-size:15px}
+aside.detail .facts{font-size:13.5px;color:var(--muted);display:grid;gap:2px;font-variant-numeric:tabular-nums}
+aside.detail a{font-size:13.5px;color:var(--maroon)}
+.badge{display:inline-block;font:700 10.5px var(--display);letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border:1.5px solid var(--ink);color:var(--ink);width:max-content}
+.badge.probable{border-style:dashed}
+.badge.lore{border-style:dotted}
+.badge.living{border-color:var(--living);color:var(--muted)}
+.key{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:14px;font-size:13.5px;color:var(--muted);align-items:center;justify-content:center}
+
+/* chapters */
+.ch-grid{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:34px;margin-top:6px}
+@media (max-width:820px){.ch-grid{grid-template-columns:minmax(0,1fr);gap:22px}}
+.ch-main{min-width:0}
+.ch-main p{margin:0 0 14px}
+.ch-main>p:first-child::first-letter{font-family:var(--display);font-weight:700;float:left;font-size:3.6em;line-height:.82;padding:6px 8px 0 0;color:var(--green)}
+.ch-side{display:grid;gap:18px;align-content:start;min-width:0}
+.family-note{background:var(--paper-2);border:1px dashed var(--maroon);padding:12px 16px;font-size:14.5px;line-height:1.55;margin:4px 0 14px}
+.family-note b{color:var(--maroon);font-family:var(--display);letter-spacing:.06em}
+.history{background:var(--paper-2);border-top:3px double var(--gold);padding:14px 16px;font-size:14.5px;line-height:1.55}
+.history h4{font-size:16px;color:var(--maroon);margin:0 0 8px}
+.history .k{display:block;font-family:var(--display);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.history ol,.history ul{padding-left:18px;margin:6px 0}
+.history li{margin-bottom:4px}
+.history p{margin:0 0 8px}
+.history .yr{font-weight:600;font-variant-numeric:tabular-nums;color:var(--green)}
+.intree{border:1px solid var(--gold);padding:14px 16px;background:var(--paper)}
+.intree h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.people{display:flex;flex-wrap:wrap;gap:6px}
+.people button{font:13.5px var(--body);background:transparent;border:1px solid var(--rule);color:var(--ink);padding:3px 10px;cursor:pointer;text-align:left}
+.people button:hover,.people button:focus-visible{border-color:var(--maroon);color:var(--maroon);outline:none}
+
+/* documents */
+figure.doc{margin:16px 0 8px;display:grid;gap:6px}
+figure.doc button{all:unset;cursor:zoom-in;display:block;border:3px double var(--gold);padding:5px;background:var(--paper-2);line-height:0}
+figure.doc button:focus-visible{outline:2px solid var(--maroon);outline-offset:3px}
+figure.doc img{display:block;width:100%;height:auto;max-height:400px;object-fit:cover;object-position:top;filter:sepia(30%)}
+figure.doc figcaption{font-size:14px;color:var(--muted);line-height:1.5}
+figure.doc figcaption b{color:var(--ink);font-weight:600}
+figure.doc figcaption a{color:var(--maroon)}
+figure.doc .credit{font-size:11.5px;font-style:italic}
+.docs{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+@media (min-width:700px){.docs{grid-template-columns:repeat(2,minmax(0,1fr))}.docs figure.doc:first-child{grid-column:span 2}}
+.docs figure.doc{margin:0}
+.docs figure.doc img{height:240px;max-height:none}
+.docs figure.doc:first-child img{height:300px}
+.lightbox{position:fixed;inset:0;z-index:20;background:rgba(20,12,6,.94);display:grid;grid-template-rows:auto 1fr;padding:calc(10px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lightbox .lbar{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#F3E6C6;font-family:var(--display);font-size:14px;padding-bottom:8px}
+.lightbox .lbar button{font:700 13px var(--display);letter-spacing:.08em;text-transform:uppercase;background:#E6C77E;color:#2C2418;border:0;padding:8px 14px;cursor:pointer}
+.lightbox .stage{overflow:auto;-webkit-overflow-scrolling:touch;text-align:center}
+.lightbox .stage img{max-width:none;width:min(1400px,180%);height:auto;background:#fff}
+@media (min-width:900px){.lightbox .stage img{width:min(1400px,100%)}}
+.lightbox[hidden]{display:none}
+
+/* graves */
+.graves{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.grave{border:1px solid var(--gold);background:var(--paper-2);padding:14px 16px;display:grid;gap:8px;align-content:start}
+.grave h3{font-size:18px;color:var(--green)}
+.grave .loc{font-size:13px;color:var(--muted);font-style:italic}
+.grave ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:14.5px}
+.grave li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dotted var(--rule);padding-bottom:3px}
+.grave li .yrs{color:var(--muted);font-size:12.5px;white-space:nowrap}
+.grave li a{font-size:12.5px;color:var(--maroon);white-space:nowrap}
+.grave .tip{font-size:13.5px;color:var(--muted);font-style:italic}
+
+/* start here */
+.quick{width:100%;border-collapse:collapse;font-size:15px;margin:0 auto;max-width:820px}
+.quick th{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:3px double var(--gold)}
+.quick td{padding:10px;border-bottom:1px dotted var(--rule);vertical-align:top}
+.quick td:first-child{font-family:var(--display);font-weight:700}
+.quick .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:1px}
+.tablewrap{overflow-x:auto}
+@media (max-width:620px){.quick thead{display:none}.quick,.quick tbody,.quick tr,.quick td{display:block;width:100%}
+ .quick tr{border:1px solid var(--rule);background:var(--paper);padding:8px 12px;margin-bottom:10px}
+ .quick td{border:0;padding:3px 0}.quick td:first-child{font-size:16px;padding-bottom:6px;border-bottom:1px dotted var(--rule);margin-bottom:4px}
+ .quick td:not(:first-child)::before{content:attr(data-l);display:block;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}}
+.say{max-width:66ch;margin:26px auto 0;background:var(--paper-2);border:1px solid var(--gold);padding:16px 20px}
+.say h3{font-size:18px;color:var(--maroon);margin-bottom:8px}
+.say ul{margin:0;padding-left:20px}
+.say li{margin-bottom:6px}
+.ladders{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:8px}
+@media (max-width:980px){.ladders{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ladders{grid-template-columns:minmax(0,1fr)}}
+.ladder{min-width:0}
+.ladder h3{font-size:17px;padding-bottom:6px;border-bottom:3px solid currentColor;margin-bottom:10px}
+.ladder h3 small{display:block;font-family:var(--body);font-weight:400;font-style:italic;font-size:13.5px;color:var(--muted)}
+.step{background:var(--paper);border:1px solid var(--rule);padding:8px 10px;font-size:14px;line-height:1.4}
+.step .r{display:block;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon)}
+.step b{font-family:var(--display);font-weight:700;font-size:15px;color:var(--ink)}
+.step .m{display:block;color:var(--muted);font-size:13px}
+.step.end{background:var(--paper-2);border-style:dashed}
+.step.imm{border:2px solid currentColor}
+.step.imm .m{color:var(--ink)}
+.arrow{text-align:center;color:var(--muted);font-size:12px;line-height:1;padding:3px 0;font-style:italic}
+.arrow::before{content:"↓ ";color:var(--gold)}
+.ladder .also{margin-top:10px;font-size:13.5px;color:var(--muted);border-top:1px dotted var(--rule);padding-top:8px}
+
+/* feud explainer */
+.fe-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 26px;max-width:820px;margin:8px auto 0}
+@media (max-width:620px){.fe-wrap{grid-template-columns:minmax(0,1fr)}}
+.fe-col{display:grid;gap:0;align-content:start;min-width:0}
+.fe-col h3{text-align:center;font-size:20px;margin-bottom:4px}
+.fe-col .sub{text-align:center;font-size:13.5px;color:var(--muted);font-style:italic;margin-bottom:10px}
+.fe-col.mc h3{color:var(--maroon)} .fe-col.hf h3{color:var(--green)}
+.fbox{border:1px solid var(--rule);background:var(--paper);padding:8px 12px;font-size:14px;line-height:1.4}
+.fbox b{font-family:var(--display);font-size:15px}
+.fbox .m{display:block;color:var(--muted);font-size:13px}
+.fe-col.mc .fbox.kb{border:2px solid var(--maroon)} .fe-col.hf .fbox.kb{border:2px solid var(--green)}
+.fbox.side{background:var(--paper-2);border-style:dashed;font-size:13.5px;margin:6px 0 2px}
+.fe-col .arrow{padding:4px 0}
+.fe-join{grid-column:1/-1;display:grid;gap:0;justify-items:center;margin-top:6px}
+@media (max-width:620px){.fe-col.hf{margin-top:22px}}
+.fe-join .fbox{text-align:center;width:min(100%,460px)}
+.fe-join .fbox.both{border:3px double var(--gold);background:var(--paper-2)}
+.ftime{overflow-x:auto;border:3px double var(--gold);background:var(--paper-2);padding:6px;margin-top:28px}
+.ftime svg{display:block;width:100%;min-width:720px;height:auto}
+.plain{max-width:66ch;margin:24px auto 0}
+.plain h3{font-size:20px;color:var(--green);margin:18px 0 8px}
+.plain p{margin:0 0 12px}
+.plain ol{padding-left:22px;margin:0 0 12px}
+.plain li{margin-bottom:8px}
+
+/* history timeline */
+.tl{list-style:none;margin:0 auto;padding:0;max-width:820px;position:relative}
+.tl::before{content:"";position:absolute;left:78px;top:6px;bottom:6px;width:2px;background:var(--gold);opacity:.6}
+.tl li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:28px;padding:9px 0;position:relative}
+.tl li::after{content:"";position:absolute;left:73px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--dot,var(--muted))}
+.tl li.world::after{border-radius:0;transform:rotate(45deg);width:9px;height:9px;left:74.5px;top:18px;background:var(--muted);border:0}
+.tl .y{font-family:var(--display);font-weight:700;font-size:17px;color:var(--green);text-align:right;font-variant-numeric:tabular-nums}
+.tl .t{min-width:0;font-size:15.5px}
+.tl .t b{font-family:var(--display);font-weight:700}
+.tl li.world .t{color:var(--muted);font-style:italic}
+.tl li.world .t b{font-style:normal;color:var(--ink)}
+.tl li.era{padding-top:22px}
+.tl li.era::after{display:none}
+.tl li.era .t{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon)}
+.tl-key{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;font-size:13.5px;color:var(--muted);margin-bottom:16px}
+.tl-key i{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--scott);vertical-align:-1px;margin-right:6px}
+.tl-key i.w{border:0;border-radius:0;background:var(--muted);transform:rotate(45deg);width:8px;height:8px}
+@media (max-width:560px){.tl::before{left:58px}.tl li{grid-template-columns:46px minmax(0,1fr);gap:32px}.tl li::after{left:53px}.tl li.world::after{left:54.5px}.tl .y{font-size:15px}}
+
+/* mysteries */
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.case{border:1px solid var(--gold);background:var(--paper-2);padding:16px;display:grid;gap:8px;align-content:start;position:relative}
+.case h3{font-size:19px;color:var(--maroon)}
+.case p{margin:0;font-size:15px}
+.case .next{font-size:13.5px;color:var(--green);border-top:1px dotted var(--rule);padding-top:8px}
+
+/* sources */
+.sources{columns:2;column-gap:30px;padding-left:18px;margin:0 auto;max-width:760px;font-size:14.5px}
+.sources li{margin-bottom:6px;break-inside:avoid}
+.sources a{color:var(--maroon)}
+@media (max-width:640px){.sources{columns:1}}
+.closing{text-align:center;max-width:60ch;margin:24px auto 0;color:var(--muted);font-style:italic}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+ <symbol id="flo" viewBox="0 0 34 34"><path d="M3 31V9c0-3.3 2.7-6 6-6h22" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 26V12c0-2.2 1.8-4 4-4h14" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M15 15c3 0 4 3 2 4s-3-1-1-2" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+</defs></svg>
+
+<nav class="bar" aria-label="Book contents"><div class="in">
+  <span class="brand">Conrad &amp; Scott</span>
+  <a href="#contents">Contents</a><a href="#start">Start Here</a><a href="#feud">Hatfields &amp; McCoys</a><a href="#tree">Tree</a><a href="#ch1">Stories</a><a href="#timeline">Timeline</a><a href="#archive">Archive</a>
+</div></nav>
+
+<main class="book" id="book">
+
+<div class="cover" id="top">
+  <div class="spine" aria-hidden="true">
+    <div class="band"></div>
+    <div class="vt">Four Roads, One Family</div>
+    <div class="yr">CONRAD<br>SCOTT<br>2026</div>
+    <div class="band"></div>
+  </div>
+  <div class="cover-face">
+    <svg class="fl tl" aria-hidden="true"><use href="#flo"/></svg><svg class="fl tr" aria-hidden="true"><use href="#flo"/></svg><svg class="fl bl" aria-hidden="true"><use href="#flo"/></svg><svg class="fl br" aria-hidden="true"><use href="#flo"/></svg>
+    <div class="top">Scotland · Ulster · Limerick · Germany</div>
+    <figure><img src="img/census-1880.jpg" alt="The 1880 census page from Pike County, Kentucky, listing Daniel and Henderson Scott"><figcaption>The Scotts in the 1880 census, Pike County, Kentucky</figcaption></figure>
+    <div class="titlebox">
+      <h1>Four Roads,<br>One Family</h1>
+      <div class="grule"></div>
+      <div class="sub">The Conrad &amp; Scott Family Record</div>
+      <div class="tag">From the Highlands to the Heartland</div>
+      <div class="date">COMPILED OCTOBER 2026</div>
+    </div>
+  </div>
+</div>
+
+<section class="page" id="contents"><div class="frame">
+  <div class="phead"><div class="eyebrow">What's inside</div><h2>Contents</h2><div class="grule"></div><p class="lead">Seven chapters, oldest first. Each ends with a short history note on what was happening around them.</p></div>
+  <ul class="toc" id="toc"></ul>
+</div></section>
+
+<section class="page" id="opener"><div class="frame">
+  <div class="phead"><div class="eyebrow">A family record</div><h2>Four Roads, One Family</h2><div class="grule"></div></div>
+  <div class="prose"><p class="dropcap">Our ancestors came from the Scottish Highlands, the Presbyterian north of Ireland, County Limerick and Germany. Their paths ran through the Blue Ridge, the Tug Valley of the Hatfields and McCoys, and the farm country of Ohio and Missouri before they met in southwest Iowa. This is what the records say, and where the records still go quiet.</p></div>
+  <div class="origins"><div><b>4</b><span>countries of origin</span></div><div><b>9</b><span>generations back</span></div><div><b>c. 1720</b><span>oldest named ancestor</span></div><div><b>1868</b><span>last immigrant to arrive</span></div></div>
+</div></section>
+
+<section class="page" id="start"><div class="frame">
+  <div class="phead"><div class="eyebrow">Start here</div><h2>How You Are Connected</h2><div class="grule"></div>
+    <p class="lead">Everyone has four grandparents, and each one brings a whole family line. This page follows each grandparent's line back, one generation at a time, until it reaches the person who came to America. Read each column from the top down. Every step down is one generation further back.</p></div>
+  <div class="tablewrap"><table class="quick">
+    <thead><tr><th>Grandparent</th><th>Family line</th><th>Came from</th><th>Reached America</th></tr></thead>
+    <tbody>
+      <tr><td data-l="Grandparent"><span class="sw" style="background:var(--scott)"></span>Grandpa Buff Scott Jr.</td><td data-l="Family line">Scott, with McCoy and Hatfield blood mixed in</td><td data-l="Came from">Scotland, by family tradition</td><td data-l="Reached America">Before 1720</td></tr>
+      <tr><td data-l="Grandparent"><span class="sw" style="background:var(--hunt)"></span>Grandma Delphia Hunt</td><td data-l="Family line">Hunt</td><td data-l="Came from">Not found yet. In the Kentucky mountains by the 1850s</td><td data-l="Reached America">Unknown</td></tr>
+      <tr><td data-l="Grandparent"><span class="sw" style="background:var(--conrad)"></span>Grandpa Fred Conrad</td><td data-l="Family line">Conrad, plus his mother's Handley family</td><td data-l="Came from">Germany (Conrad) and County Limerick, Ireland (Handley)</td><td data-l="Reached America">1868 (Conrad) and about 1860 (Handley)</td></tr>
+      <tr><td data-l="Grandparent"><span class="sw" style="background:var(--fleming)"></span>Grandma Helen Fleming</td><td data-l="Family line">Fleming, plus McCunn and Carmichael</td><td data-l="Came from">Ulster, the Scottish north of Ireland</td><td data-l="Reached America">1700s (Fleming) and by 1841 (McCunn)</td></tr>
+    </tbody></table></div>
+  <div class="ladders" id="ladders" style="margin-top:28px"></div>
+  <div class="say"><h3>Quick answers</h3><ul>
+    <li><b>Are we Scottish?</b> Yes, on both sides. Mom's Scott line traces to Scotland by family tradition. Dad's Fleming, McCunn and Carmichael lines are Scots-Irish: Scottish families who lived in Ulster before coming to America.</li>
+    <li><b>Are we Irish?</b> Yes. Grandpa Fred's mother was a Handley, and her grandfather John Handley was born in County Limerick in 1836.</li>
+    <li><b>Are we German?</b> Yes. The Conrad name comes from Jacob Conrad, who arrived from Germany in 1868 at age 14.</li>
+    <li><b>Are we Hatfields or McCoys?</b> Both, through Mom's side. The next page explains exactly how.</li>
+    <li><b>Where did the two sides meet?</b> Both of Dad's grandparents' families lived around Clarinda, Iowa, and Grandma Delphia worked there too. Arizona is where the family lives today.</li>
+  </ul></div>
+</div></section>
+
+<section class="page" id="feud"><div class="frame">
+  <div class="phead"><div class="eyebrow">The question everyone asks</div><h2>How We Are Both Hatfields and McCoys</h2><div class="where">Pike County, Kentucky, and the Tug Valley · 1786 to 1927</div><div class="grule"></div>
+    <p class="lead">Two different ancestors on Mom's side brought in the two names, more than a hundred years apart. The McCoy blood came first, long before the feud. The Hatfield blood came last, long after it ended. The two lines meet in one person: Grandpa Buff Scott Jr.</p></div>
+  <div class="fe-wrap">
+    <div class="fe-col mc"><h3>The McCoy line</h3><div class="sub">Grandpa Buff's father's side</div>
+      <div class="fbox kb"><b>"Old William" McCoy</b><span class="m">1752–1822 · Revolutionary War soldier</span></div>
+      <div class="arrow">his daughter</div>
+      <div class="fbox kb"><b>Elizabeth McCoy</b><span class="m">born 1786 · married Billy Scott around 1810</span></div>
+      <div class="fbox side">Her brother <b>Daniel McCoy</b> was the father of <b>Randolph McCoy</b> (1825–1914), the head of the McCoy family in the feud. So Elizabeth was Randolph's aunt.</div>
+      <div class="arrow">her son</div>
+      <div class="fbox"><b>Daniel Scott</b><span class="m">1815–1885 · Randolph McCoy's first cousin</span></div>
+      <div class="arrow">his son</div>
+      <div class="fbox"><b>Henderson Scott</b><span class="m">1852–1915 · lived near the McCoys during the feud</span></div>
+      <div class="arrow">his daughter</div>
+      <div class="fbox"><b>Allie Scott</b><span class="m">1873–1932</span></div>
+      <div class="arrow">her son</div>
+      <div class="fbox kb"><b>Buff Scott Sr.</b><span class="m">1903–1985 · carries the McCoy blood</span></div>
+    </div>
+    <div class="fe-col hf"><h3>The Hatfield line</h3><div class="sub">Grandpa Buff's mother's side</div>
+      <div class="fbox kb"><b>Jeremiah Hatfield</b><span class="m">1807–1913 · married Rachel Vance</span></div>
+      <div class="fbox side">Devil Anse Hatfield, the head of the Hatfield family in the feud, also had a Vance mother. Both men belonged to the same Tug Valley Hatfield clan. Exactly how they were related is not proven yet.</div>
+      <div class="arrow">his son</div>
+      <div class="fbox"><b>George Oliver Hatfield</b><span class="m">1844–1917 · buried in the Anderson Hatfield Memorial Cemetery</span></div>
+      <div class="arrow">his son</div>
+      <div class="fbox"><b>James Hatfield</b><span class="m">1875–1945</span></div>
+      <div class="arrow">his daughter</div>
+      <div class="fbox kb"><b>Maude Hatfield</b><span class="m">1904–1970 · carries the Hatfield blood</span></div>
+    </div>
+    <div class="fe-join">
+      <div class="arrow" style="padding-top:12px">the two lines join</div>
+      <div class="fbox"><b>1923: Buff Scott Sr. marries Maude Hatfield</b><span class="m">32 years after the feud ended</span></div>
+      <div class="arrow">their son</div>
+      <div class="fbox both"><b>Grandpa Buff Scott Jr.</b><span class="m">born 1927 · the first in our line who is both McCoy and Hatfield</span></div>
+      <div class="arrow">his daughter</div>
+      <div class="fbox"><b>Mom, Jean Scott</b></div>
+      <div class="arrow">her son</div>
+      <div class="fbox"><b>Jamey</b> and his children</div>
+    </div>
+  </div>
+  <div class="ftime"><svg id="feudTime" viewBox="0 0 900 230" role="img" aria-label="Timeline from 1780 to 1940 showing McCoy blood entering the family around 1810, the feud from 1865 to 1891, and Hatfield blood entering in 1923"></svg></div>
+  <div class="plain">
+    <h3>The short version</h3>
+    <ol>
+      <li><b>About 1810:</b> Billy Scott marries Elizabeth McCoy. Our Scotts are now McCoy relatives. The feud is still 55 years away.</li>
+      <li><b>1865 to 1891:</b> The feud. Elizabeth's grandson Henderson Scott is a young farmer in the same part of Pike County as his cousin Randolph McCoy. The 1880 census lists Henderson's family and Randolph's family in the same district.</li>
+      <li><b>1923:</b> Henderson's grandson, Buff Scott Sr., marries Maude Hatfield. By now the feud is over, and families from both sides are marrying each other.</li>
+      <li><b>1927:</b> Grandpa Buff Scott Jr. is born, with McCoy blood from his father and Hatfield blood from his mother. Everyone below him on the family tree, including Mom and you, carries both.</li>
+    </ol>
+    <h3>What we know and what is only a story</h3>
+    <p><b>Proven by records:</b> the 1880 census shows the Scotts and Randolph McCoy in the same district. Buff Sr. married Maude Hatfield. Grandpa Buff descends from both.</p>
+    <p><b>Probable, from well-sourced family trees:</b> Elizabeth McCoy was Randolph McCoy's aunt.</p>
+    <p><b>Family lore, not yet proven:</b> Henderson was shot after being mistaken for a McCoy. His daughter Parlee left the McCoy home the day before it burned. His son Julius married Preacher Anse Hatfield's daughter. No record shows any of our direct ancestors fighting in the feud.</p>
+    <h3>Why feuding families ended up related</h3>
+    <p>The Tug Valley was a small world. The same families had lived along the Tug Fork, the river between Kentucky and West Virginia, for generations. People married their neighbors, so Hatfields, McCoys, Scotts, Staffords, Vances and Blackburns were already tangled together long before 1865. Some McCoys even sided with the Hatfields during the feud. Once the violence ended, marrying across the old line was normal again.</p>
+  </div>
+</div></section>
+
+<section class="page" id="routes"><div class="frame">
+  <div class="phead"><div class="eyebrow">The routes</div><h2>How Each Line Got Here</h2><div class="grule"></div>
+    <p class="lead">Each colored line is one grandparent's side of the family. Stations show where they settled and roughly when. A hollow station marks family tradition that no record has confirmed yet.</p></div>
+  <div class="map-box"><svg id="routeMap" viewBox="0 0 1000 470" role="img" aria-label="Route map showing four family lines traveling from Scotland, Ulster, Limerick and Germany across the Atlantic to Kentucky, Pennsylvania, Ohio, Missouri, Iowa and Arizona"></svg></div>
+  <div class="legend" id="legend"></div>
+</div></section>
+
+<section class="page" id="tree"><div class="frame">
+  <div class="phead"><div class="eyebrow">The tree</div><h2>Every Direct Ancestor We Have Found</h2><div class="grule"></div>
+    <p class="lead">Read left to right: each person's parents sit to their right. The overview shows four generations. Pick a side of the family to see every ancestor on it, and tap anyone for their story. Relationships are counted from Jamey.</p></div>
+  <div class="chips" id="chips" role="group" aria-label="Show a side of the family"></div>
+  <div class="tree-grid">
+    <div class="tree-scroll" id="treeScroll"><svg id="treeSvg" aria-label="Family tree"></svg></div>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </div>
+  <div class="key">
+    <span class="badge">Proven</span><span>original record found</span>
+    <span class="badge probable">Probable</span><span>well-sourced online tree</span>
+    <span class="badge lore">Family lore</span><span>a story, no record yet</span>
+    <span class="badge living">Living</span><span>name only</span>
+  </div>
+</div></section>
+
+<div id="chapters" style="display:contents"></div>
+
+<section class="page" id="timeline"><div class="frame">
+  <div class="phead"><div class="eyebrow">Our family in history</div><h2>The Timeline</h2><div class="where">1715 to 2021</div><div class="grule"></div>
+    <p class="lead">Our family's moments next to what was happening in the world. Round dots are our family, colored by grandparent's side. Gray diamonds are world events.</p></div>
+  <div class="tl-key"><span><i style="border-color:var(--scott)"></i>Scott side</span><span><i style="border-color:var(--hunt)"></i>Hunt side</span><span><i style="border-color:var(--conrad)"></i>Conrad side</span><span><i style="border-color:var(--fleming)"></i>Fleming side</span><span><i class="w"></i>World event</span></div>
+  <ol class="tl" id="tl"></ol>
+</div></section>
+
+<section class="page" id="archive"><div class="frame">
+  <div class="phead"><div class="eyebrow">The archive</div><h2>The Original Records</h2><div class="grule"></div>
+    <p class="lead">Pages from the actual ledgers, cards and census sheets where our ancestors' names were written down. Tap any page to read it full size.</p></div>
+  <div class="docs" id="docs"></div>
+</div></section>
+
+<section class="page" id="graves"><div class="frame">
+  <div class="phead"><div class="eyebrow">Where they rest</div><h2>Family Graves</h2><div class="grule"></div>
+    <p class="lead">Every burial place we have found, grouped by cemetery. The links open volunteer photographs of each stone on Find a Grave or the Iowa Gravestone Photo Project.</p></div>
+  <div class="graves" id="graveList"></div>
+</div></section>
+
+<section class="page" id="mysteries"><div class="frame">
+  <div class="phead"><div class="eyebrow">Unsolved</div><h2>Where the Records Go Quiet</h2><div class="grule"></div>
+    <p class="lead">If you know anything about these, or have papers, photos or a family Bible, send it to Jamey.</p></div>
+  <div class="cases" id="cases"></div>
+</div></section>
+
+<section class="page" id="sources"><div class="frame">
+  <div class="phead"><div class="eyebrow">How this was made</div><h2>Sources</h2><div class="grule"></div>
+    <p class="lead">Compiled by Jamey Conrad from census, military, naturalization, marriage and cemetery records, plus family trees on FamilySearch and Find a Grave. Living relatives are listed by name only.</p></div>
+  <ul class="sources">
+<li><a href="https://www.familysearch.org/ark:/61903/1:1:MCZP-6V9" target="_blank" rel="noopener">1880 U.S. Census, Blackberry, Pike Co., Kentucky (Scott households)</a></li>
+<li><a href="https://www.familysearch.org/ark:/61903/1:1:W888-DBPZ" target="_blank" rel="noopener">WWI draft card of Fred W. Conrad, 1917</a></li>
+<li><a href="https://www.familysearch.org/ark:/61903/1:1:M38M-2QW" target="_blank" rel="noopener">1900 U.S. Census, Skidmore, Missouri (Jacob Conrad household)</a></li>
+<li><a href="https://www.familysearch.org/ark:/61903/1:1:QGKD-1W9R" target="_blank" rel="noopener">Jacob Conrad naturalization, Stark Co., Ohio, 1875</a></li>
+<li><a href="https://www.nodawayvalleyfuneralhome.com/obituaries/Frederick-Harrell-Conrad?obId=109149" target="_blank" rel="noopener">Obituary of Frederick Harrell Conrad, 2014</a></li>
+<li><a href="https://iagenweb.org/page/obituaries/alphas/C101.html" target="_blank" rel="noopener">Obituary of Helen Maxine Fleming Conrad, 2010</a></li>
+<li><a href="https://www.findagrave.com/memorial/230693810/delphia_rosetta-renfro" target="_blank" rel="noopener">Delphia Rosetta Hunt Renfro memorial, 2021</a></li>
+<li><a href="https://www.findagrave.com/memorial/76117958/henderson_maynard-scott" target="_blank" rel="noopener">Henderson Maynard Scott memorial and family account</a></li>
+<li><a href="https://www.familysearch.org/tree/person/details/LY1Y-K95" target="_blank" rel="noopener">William Scott Sr. of Bedford Co., Virginia, research notes</a></li>
+<li><a href="https://www.familysearch.org/tree/person/details/LKKM-8WT" target="_blank" rel="noopener">"Old William" McCoy family</a></li>
+  </ul>
+  <p class="closing">To be continued as the records turn up.</p>
+  <div class="orn" style="text-align:center;margin-top:10px">✦ ✦ ✦</div>
+</div></section>
+
+</main>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+  <div class="lbar"><span id="lbTitle"></span><button type="button" id="lbClose">Close</button></div>
+  <div class="stage" id="lbStage"></div>
+</div>
+
+<script>
+const BR = {
+  scott:{label:"Scott", note:"Grandpa Buff's side", root:"buffjr"},
+  hunt:{label:"Hunt", note:"Grandma Delphia's side", root:"delphia"},
+  conrad:{label:"Conrad", note:"Grandpa Fred's side", root:"fredh"},
+  fleming:{label:"Fleming", note:"Grandma Helen's side", root:"helen"}
+};
+// c: proven | probable | lore | living ; sx: m|f
+const P = {
+ jamey:{n:"Jamey Conrad",sx:"m",c:"living",b:"all",f:"stephen",m:"jean"},
+ stephen:{n:"Stephen Frederick Conrad",sx:"m",c:"living",b:"conrad",f:"fredh",m:"helen"},
+ jean:{n:"Jean Scott",sx:"f",c:"living",b:"scott",f:"buffjr",m:"delphia"},
+ buffjr:{n:"Buff Scott Jr.",sx:"m",c:"living",b:"scott",f:"buffsr",m:"maude"},
+ delphia:{n:"Delphia Rosetta Hunt",sx:"f",y:"1934–2021",pl:"Born Mouthcard, Pike Co., Kentucky",c:"proven",b:"hunt",f:"kinzie",m:"cora",
+   s:"Youngest of seven. Worked for years as a nurse's aide in Missouri and Iowa and retired in 1977 from the psychiatric unit of the Clarinda Mental Health Institute, in the same Iowa town where the Conrads lived. Moved to Arizona in 2019 to be near family. Buried at the National Memorial Cemetery of Arizona.",
+   src:"https://www.findagrave.com/memorial/230693810/delphia_rosetta-renfro"},
+ fredh:{n:"Frederick Harrell \"Fred\" Conrad",sx:"m",y:"1924–2014",pl:"Born and died in Clarinda, Iowa",c:"proven",b:"conrad",f:"fredw",m:"maryagnes",
+   s:"Clarinda High School, class of 1942. Served in World War II as a U.S. Marine. Married Helen Fleming in Bakersfield, California, in 1945. A watchmaker first and last, with farming and maintenance work at Iowa Western Community College in between. Member of Nodaway Masonic Lodge #140. Buried with military rites.",
+   src:"https://www.nodawayvalleyfuneralhome.com/obituaries/Frederick-Harrell-Conrad?obId=109149"},
+ helen:{n:"Helen Maxine Fleming",sx:"f",y:"1926–2010",pl:"Born and died in Clarinda, Iowa",c:"proven",b:"fleming",f:"warren",m:"elva",
+   s:"Clarinda High School graduate. After Fred left the service they lived in Wyoming, Colorado and Nebraska, then came home to her family's Page County farm for 18 years before moving into Clarinda. Mother of five.",
+   src:"https://iagenweb.org/page/obituaries/alphas/C101.html"},
+ // Scott side
+ buffsr:{n:"Buff Scott Sr.",sx:"m",y:"1903–1985",pl:"Pike Co., Ky. → Gallipolis, Ohio",c:"proven",b:"scott",f:"emzy",m:"allie",
+   s:"Born in Pike County, Kentucky. Married Maude Hatfield in 1923 and raised eight children. Buried in Pine Street Cemetery, Gallipolis, Ohio.",src:"https://www.findagrave.com/memorial/13649781/buff-scott"},
+ maude:{n:"Maude \"Maudie\" Hatfield",sx:"f",y:"1904–1970",pl:"Pike Co., Kentucky",c:"probable",b:"scott",f:"jameshat",m:"maryjohnson",
+   s:"A Hatfield of Pike County, Kentucky, born 16 years after the feud's worst night. Mother of eight. Buried beside Buff Sr. in Gallipolis, Ohio.",src:"https://www.familysearch.org/tree/person/details/L56Z-5ZG"},
+ emzy:{n:"Emzy B. Scott",sx:"m",y:"1875–1949",pl:"Hardy, Pike Co., Kentucky",c:"probable",b:"scott",f:"wtscott",m:"nancystacy",
+   s:"Married five times and fathered 18 recorded children. Buried in the Julius Scott Cemetery at Hardy.",src:"https://www.findagrave.com/memorial/168441560/emzy_b-scott"},
+ allie:{n:"Alice \"Allie\" Scott",sx:"f",y:"1873–1932",pl:"Hardy, Pike Co., Kentucky",c:"proven",b:"scott",f:"henderson",m:"vicy",
+   s:"Born a Scott and married into another Scott family. Our direct Scott bloodline runs through her. Her death certificate survives.",src:"https://www.findagrave.com/memorial/154749096/alice-hughes"},
+ wtscott:{n:"William Tazwell Scott",sx:"m",pl:"Kentucky",c:"lore",b:"scott",s:"Named as Emzy's father in a family account. Dates not yet found."},
+ nancystacy:{n:"Nancy Stacy",sx:"f",c:"lore",b:"scott",s:"Named as Emzy's mother in a family account."},
+ henderson:{n:"Henderson Maynard Scott",sx:"m",y:"1852–1915",pl:"Pike Co., Kentucky",c:"proven",b:"scott",f:"danielscott",m:"nancystafford",
+   s:"A farmer at Hardy, counted in every census from 1870 to 1910. Family accounts say he was shot during the feud after being mistaken for a McCoy. He was in fact a McCoy cousin. Killed in 1915 when a rolling log struck him.",src:"https://www.findagrave.com/memorial/76117958/henderson_maynard-scott"},
+ vicy:{n:"Louisa \"Vicy\" Farley",sx:"f",y:"1852–1924",pl:"Pike Co., Kentucky",c:"probable",b:"scott",s:"Mother of Parlee, Allie and Julius.",src:"https://www.findagrave.com/memorial/75045429/louisa-farley"},
+ danielscott:{n:"Daniel Scott",sx:"m",y:"1815–1885",pl:"Floyd (now Pike) Co., Kentucky",c:"proven",b:"scott",f:"billy",m:"elizmccoy",
+   s:"Son of a McCoy mother. That makes him a first cousin of Randolph McCoy, the head of the McCoy family in the feud. Married Nancy Stafford in 1836 with a consent letter signed by his parents. Father of ten.",src:"https://www.familysearch.org/ark:/61903/1:1:MCZP-6V9"},
+ nancystafford:{n:"Nancy Stafford",sx:"f",y:"1816–1887",pl:"Pike Co., Kentucky",c:"probable",b:"scott",s:"Daughter of John Miles Stafford and Nancy Runyon, both born in Montgomery County, Virginia. Buried in Farley Cemetery at Hatfield, Kentucky.",src:"https://staffordsociety.org/genealogy/getperson.php?personID=I22712&tree=019Branch"},
+ billy:{n:"William \"Billy\" Scott",sx:"m",y:"1784–1864",pl:"Bedford Co., Virginia → Pike Co., Kentucky",c:"probable",b:"scott",f:"axton",m:"dorcas",
+   s:"Born at the foot of the Blue Ridge in Bedford County, Virginia, and carried the family west into the Tug Valley of Kentucky. Married Elizabeth McCoy. Buried in the Scott Cemetery at Belfry.",src:"https://www.findagrave.com/memorial/12259089/william-scott"},
+ elizmccoy:{n:"Elizabeth McCoy",sx:"f",y:"1786–1860",pl:"Maryland → Pike Co., Kentucky",c:"probable",b:"scott",f:"oldwilliam",m:"cordelia",
+   s:"Daughter of \"Old William\" McCoy. Her brother Daniel was the father of Randolph McCoy, so she was the feud patriarch's aunt.",src:"https://www.familysearch.org/tree/person/details/L62J-7RG"},
+ axton:{n:"Axton Scott",sx:"m",y:"c. 1755–1793",pl:"Bedford Co., Virginia",c:"probable",b:"scott",f:"williamsr",m:"lucy",s:"Married Dorcas Wright in 1776, the year of the Declaration of Independence.",src:"https://www.familysearch.org/tree/person/details/LVSK-SVN"},
+ dorcas:{n:"Dorcas Wright",sx:"f",y:"c. 1744–1795",pl:"Virginia",c:"probable",b:"scott",src:"https://www.familysearch.org/tree/person/details/LCTH-S64"},
+ williamsr:{n:"William Scott Sr.",sx:"m",y:"c. 1720–1794",pl:"Maryland? → Bedford Co., Virginia",c:"probable",b:"scott",
+   s:"Our oldest named Scott. His 1793 will in Bedford County names his wife Lucy and twelve children. An 1851 family history says his father came from the Highlands of Scotland to Maryland early in the 1700s. No record names his parents yet.",src:"https://www.familysearch.org/tree/person/details/LY1Y-K95"},
+ lucy:{n:"Lucy (Lucretia) James",sx:"f",pl:"Virginia",c:"probable",b:"scott",s:"Named as William's widow in his will."},
+ oldwilliam:{n:"\"Old William\" McCoy",sx:"m",y:"1752–1822",pl:"Washington Co., Maryland → Kentucky",c:"probable",b:"scott",s:"Revolutionary War soldier. Grandfather of Randolph McCoy.",src:"https://www.familysearch.org/tree/person/details/LKKM-8WT"},
+ cordelia:{n:"Cordelia Campbell",sx:"f",y:"1751–1822",pl:"Maryland",c:"probable",b:"scott"},
+ jameshat:{n:"James Hatfield",sx:"m",y:"1875–1945",pl:"Ransom, Pike Co., Kentucky",c:"probable",b:"scott",f:"georgeoliver",m:"causby",src:"https://www.familysearch.org/tree/person/details/LK4K-2M4"},
+ maryjohnson:{n:"Mary Johnson",sx:"f",y:"b. 1874",c:"probable",b:"scott"},
+ georgeoliver:{n:"George Oliver Hatfield",sx:"m",y:"1844–1917",pl:"Pike Co., Kentucky",c:"probable",b:"scott",
+   s:"Son of Jeremiah Hatfield and Rachel Vance. Buried in the Anderson Hatfield Memorial Cemetery at McCarr. Devil Anse Hatfield's mother was also a Vance; the exact kinship has not been proven.",src:"https://www.familysearch.org/tree/person/details/LM98-5XL"},
+ causby:{n:"Causby Blackburn",sx:"f",y:"1843–1914",c:"probable",b:"scott"},
+ // Hunt side
+ kinzie:{n:"Kinzie Bee Hunt",sx:"m",y:"1898–1959",pl:"Mouthcard, Pike Co., Kentucky",c:"probable",b:"hunt",f:"jamesmadhunt",m:"marthaskeen",src:"https://www.familysearch.org/tree/person/details/GLMM-PFC"},
+ cora:{n:"Cora Alice Puckett",sx:"f",y:"1902–1973",pl:"Kentucky",c:"probable",b:"hunt"},
+ jamesmadhunt:{n:"James Madison Hunt",sx:"m",y:"1861–1940",pl:"Mouthcard, Pike Co., Kentucky",c:"probable",b:"hunt",f:"williamhunt",m:"pricy",src:"https://www.familysearch.org/tree/person/details/KJ41-S99"},
+ marthaskeen:{n:"Martha Skeen",sx:"f",y:"1864–1941",c:"probable",b:"hunt"},
+ williamhunt:{n:"William Hunt",sx:"m",y:"1829–1913",pl:"Pike Co., Kentucky",c:"probable",b:"hunt"},
+ pricy:{n:"Pricy Bishop",sx:"f",y:"1838–1930",c:"probable",b:"hunt"},
+ // Conrad side
+ fredw:{n:"Frederick William \"Fred W.\" Conrad",sx:"m",y:"1889–1959",pl:"Skidmore, Mo. → Clarinda, Iowa",c:"proven",b:"conrad",f:"jacob",m:"maryagnes",
+   s:"A farmer at Skidmore when he registered for the draft in 1917. Private, Headquarters Company, 356th Infantry, from April 1918 to June 1919. His 1919 discharge lists an address in Clarinda. Married Mary Agnes Handley at St. Patrick's Church, Ford City, Missouri, in 1920. Father of William, Fred and Gene.",src:"https://www.familysearch.org/tree/person/details/K8TK-LN4"},
+ maryagnes:{n:"Mary Agnes Handley",sx:"f",y:"1889–1966",pl:"King City, Mo. → Clarinda, Iowa",c:"proven",b:"conrad",f:"wahandley",m:"maryannmagee",
+   s:"Eldest of thirteen children on a Gentry County, Missouri farm. Christened at St. Patrick's Church, Ford City. Her gravestone in Clarinda carries a cross.",src:"https://www.familysearch.org/tree/person/details/KC59-35M"},
+ jacob:{n:"Jacob Conrad",sx:"m",y:"1853–1909",pl:"Germany → Ohio → Skidmore, Missouri",c:"proven",b:"conrad",f:"johannes",m:"annanover",
+   s:"Arrived in America in June 1868, age 14. Naturalized in Stark County, Ohio, in 1875, renouncing allegiance to \"Emperor William.\" Married Addie Young in 1876, farmed in Tuscarawas County, Ohio, then moved the family of ten children to Skidmore, Missouri.",src:"https://www.familysearch.org/ark:/61903/1:1:QGKD-1W9R"},
+ annanover:{n:"Anna M. Nover",sx:"f",y:"b. 1826",pl:"Germany",c:"lore",b:"conrad",src:"https://www.familysearch.org/tree/person/details/L568-BYV"},
+ johannes:{n:"Johannes Conrad",sx:"m",y:"1824–1870",pl:"Germany",c:"lore",b:"conrad",s:"Named in one online tree. If the dates are right, he died two years after his 14-year-old son left for America.",src:"https://www.familysearch.org/tree/person/details/L568-5HY"},
+ addie:{n:"Adaline \"Addie\" Young",sx:"f",y:"c. 1858–1934",pl:"Ohio",c:"proven",b:"conrad",s:"Married Jacob in Stark County, Ohio, on May 20, 1876, at 18."},
+ wahandley:{n:"William Alphonsis Handley",sx:"m",y:"1864–1947",pl:"Pennsylvania → Gentry Co., Missouri",c:"probable",b:"conrad",f:"johnhandley",m:"margaretburns",
+   s:"Farmed in Miller Township, Gentry County, from childhood to old age. Married Mary Ann Magee at St. Peter's Church in Stanberry. Thirteen children. Grandpa Fred's brother William Alphonsis was named for him.",src:"https://www.familysearch.org/tree/person/details/KC88-4X7"},
+ maryannmagee:{n:"Mary Ann Magee",sx:"f",y:"1870–1951",pl:"Missouri",c:"probable",b:"conrad"},
+ johnhandley:{n:"John Handley",sx:"m",y:"1836–1902",pl:"County Limerick, Ireland → Missouri",c:"probable",b:"conrad",s:"Born in County Limerick in 1836. A child during the Great Famine. Married Margaret Burns, reportedly in Ireland, and was farming in Gentry County, Missouri, by 1870.",src:"https://www.familysearch.org/tree/person/details/K4YG-RNW"},
+ margaretburns:{n:"Margaret Burns",sx:"f",y:"1834–1908",pl:"Ireland?",c:"probable",b:"conrad"},
+ // Fleming side
+ warren:{n:"Warren Albert Fleming",sx:"m",y:"1893–1973",pl:"Page Co., Iowa",c:"probable",b:"fleming",f:"charlesmay",m:"margaretmccunn",s:"Owned the Page County farm where Fred and Helen later lived for 18 years.",src:"https://www.familysearch.org/tree/person/details/K8FM-B3J"},
+ elva:{n:"Elva Mae Carmichael",sx:"f",y:"1897–1983",pl:"Taylor Co. → Clarinda, Iowa",c:"probable",b:"fleming",f:"wbcarm",m:"nellie",src:"https://www.familysearch.org/tree/person/details/MC5J-381"},
+ charlesmay:{n:"Charles May Fleming",sx:"m",y:"1853–1913",pl:"Platte City, Mo. → Clarinda, Iowa",c:"probable",b:"fleming",f:"thomasplummer",m:"janemcfarland"},
+ margaretmccunn:{n:"Margaret Jane McCunn",sx:"f",y:"1868–1907",pl:"Clarinda, Iowa",c:"probable",b:"fleming",f:"johncalvin",m:"harriet"},
+ wbcarm:{n:"William Benson Carmichael",sx:"m",y:"1872–1937",pl:"Page Co., Iowa",c:"probable",b:"fleming",f:"williamcarm",m:"lydia"},
+ nellie:{n:"Nellie May Brooks",sx:"f",y:"1878–1967",pl:"Page Co., Iowa",c:"probable",b:"fleming"},
+ thomasplummer:{n:"Thomas Plummer Fleming",sx:"m",y:"1827–1893",pl:"Uniontown, Pa. → Clarinda, Iowa",c:"probable",b:"fleming",f:"mathew",m:"maryelizsimpson"},
+ janemcfarland:{n:"Jane McFarland",sx:"f",y:"1833–1909",pl:"Licking Co., Ohio → Clarinda",c:"probable",b:"fleming",s:"Daughter of Moses McFarland and Sally McClelland. Two Scottish surnames in one line."},
+ johncalvin:{n:"John Calvin McCunn",sx:"m",y:"1841–1883",pl:"Indiana Co., Pa. → Page Co., Iowa",c:"probable",b:"fleming",f:"jameswmccunn",m:"catherine",s:"Married Harriet Elder in the Presbyterian church at Indiana, Pennsylvania, in 1867."},
+ harriet:{n:"Harriet E. Elder",sx:"f",y:"1848–1932",pl:"Indiana Co., Pennsylvania",c:"probable",b:"fleming"},
+ jameswmccunn:{n:"James William McCunn",sx:"m",y:"1811–1889",pl:"Derry, Ulster → Pennsylvania",c:"probable",b:"fleming",s:"Born in Derry in the north of Ireland in 1811. An Ulster Presbyterian of Scottish stock who settled in Indiana County, Pennsylvania.",src:"https://www.familysearch.org/tree/person/details/KC4Y-GJP"},
+ catherine:{n:"Catherine Hadden",sx:"f",y:"1818–1904",c:"probable",b:"fleming"},
+ mathew:{n:"Mathew Fleming",sx:"m",y:"1792–1871",pl:"Pennsylvania",c:"probable",b:"fleming",s:"Buried in Allegheny Cemetery, Pittsburgh."},
+ maryelizsimpson:{n:"Mary Elizabeth Simpson",sx:"f",y:"1795–1883",c:"probable",b:"fleming"},
+ williamcarm:{n:"William Carmichael",sx:"m",y:"1838–1905",pl:"Greene Co., Indiana → Iowa",c:"probable",b:"fleming",f:"archibald",m:"agnes"},
+ lydia:{n:"Lydia Ellen Wamsley",sx:"f",y:"1844–1919",c:"probable",b:"fleming"},
+ archibald:{n:"Archibald Carmichael",sx:"m",y:"1810–1848",pl:"Stokes Co., North Carolina → Indiana",c:"lore",b:"fleming",s:"Carries the line back to colonial North Carolina through his father, Sterling Carmichael (1774–1850)."},
+ agnes:{n:"Agnes Martindale",sx:"f",y:"1812–1900",c:"lore",b:"fleming"}
+};
+for(const k in P){P[k].id=k}
+const CONF={proven:"Proven",probable:"Probable",lore:"Family lore",living:"Living"};
+
+/* ---------- book ---------- */
+const CH=[
+ {t:"From the Highlands to the Blue Ridge",w:"Maryland and Bedford County, Virginia · c. 1700–1810",ppl:["williamsr","axton","billy"],
+  body:[
+   "The oldest Scott we can name is William Scott Sr., who died in Bedford County, Virginia, in 1794. His will, written in December 1793, names his wife Lucy and twelve children. He bought land near the foot of the Blue Ridge, on Goose Creek, and his family stayed there for two generations.",
+   "Where he came from is the family's oldest open question. A Scott family history written in 1851 says his father emigrated from the Highlands of Scotland to Charles or Prince George's County, Maryland, early in the 1700s. Other researchers have proposed Denny or Selkirk in Scotland, or Ireland. No record yet settles it, which is why the map shows that first stop as a hollow circle.",
+   "His son Axton married Dorcas Wright in 1776. Their son William \"Billy\" Scott, born in Bedford County in December 1784, is the one who turned west. He crossed into the Tug Valley of eastern Kentucky, married a McCoy, and planted the Scott family in what would become Pike County. Most of the Scotts in that valley today descend from him."],
+  lesson:{h:"Highland, Lowland or Ulster?",html:`<p>“Scottish roots” in America usually means one of three groups:</p>
+   <ul><li><b>Highlanders</b>, Gaelic-speaking clans from the north, many pushed out after the failed Jacobite risings of 1715 and 1745.</li>
+   <li><b>Lowlanders</b>, from the south and the Border country, where the Scott clan was strongest.</li>
+   <li><b>Scots-Irish</b>, Lowland Scots who settled Ulster in the 1600s and then left for America in the 1700s.</li></ul>
+   <p>Many families of all three came down the Great Wagon Road from Pennsylvania and Maryland into the Virginia backcountry, exactly the route the Scotts took.</p>`}},
+ {fig:["census1880"],t:"McCoy Blood, Hatfield Brides",w:"The Tug Valley, Kentucky and West Virginia · 1812–1923",ppl:["elizmccoy","oldwilliam","danielscott","henderson","allie","maude","georgeoliver"],
+  body:[
+   "Billy Scott's wife was Elizabeth McCoy, daughter of a Revolutionary War soldier known as \"Old William\" McCoy. Her brother Daniel McCoy had a son named Randolph, the \"Ole Ran'l\" McCoy who led his family through the Hatfield–McCoy feud. That makes Elizabeth the feud patriarch's aunt, and her son Daniel Scott his first cousin. Randolph McCoy was a first cousin of our 4th great-grandfather.",
+   "In June 1880 the census taker for the Blackberry district of Pike County wrote down Daniel Scott, 64, and his wife Nancy, and in the very next house their son Henderson, his wife Vicy and six-year-old Allie. Randolph McCoy's household was counted in the same district a few pages earlier. Daniel's son, Henderson Maynard Scott, grew up in the middle of the feud. A family account says Henderson and his brother John were riding together during the feud when both were shot, Henderson in the shoulder and John in the knee, because someone took them for McCoys. The irony is that they were McCoy cousins. The same account says Henderson's daughter Parlee stayed at the McCoy home the night before the Hatfields burned it on New Year's Day 1888. She was invited back the next night and her parents called her home that day.",
+   "The family married into both sides. Henderson's son Julius married Polly Hatfield, daughter of \"Preacher Anse\" Hatfield, the justice of the peace who presided over the famous Hog Trial. Henderson's grandson, Buff Scott Sr., married Maude Hatfield in 1923. Maude's grandfather George Oliver Hatfield is buried in the Anderson Hatfield Memorial Cemetery, and his mother was a Vance, as was Devil Anse Hatfield's mother. How closely Maude was related to Devil Anse has not been proven."],
+  note:"The shooting, Parlee's night at the McCoy home and Julius's marriage come from a family account posted with Henderson's memorial. They are marked as family lore until a record confirms them.",
+  lesson:{h:"The feud in five dates",html:`<ol>
+   <li><span class="yr">1865</span> Asa Harmon McCoy, a Union veteran and Randolph's brother, is killed in West Virginia. Many blame Hatfield allies.</li>
+   <li><span class="yr">1878</span> The Hog Trial. Randolph McCoy accuses Floyd Hatfield of stealing a hog. Preacher Anse Hatfield presides and the jury sides with the Hatfields.</li>
+   <li><span class="yr">1882</span> Election Day fight. Ellison Hatfield is fatally stabbed. Three of Randolph's sons are executed in revenge.</li>
+   <li><span class="yr">1888</span> New Year's Night raid. Hatfields burn the McCoy cabin and kill two of Randolph's children.</li>
+   <li><span class="yr">1890</span> Ellison Mounts is hanged in Pikeville. The worst violence ends.</li></ol>
+   <p>Asa Harmon McCoy and Randolph were both Elizabeth McCoy's nephews.</p>`}},
+ {t:"The Presbyterians of Derry",w:"Ulster, Pennsylvania and Page County, Iowa · 1811–1907",ppl:["jameswmccunn","johncalvin","margaretmccunn","thomasplummer","janemcfarland","archibald","warren","elva"],
+  body:[
+   "Grandma Helen's side turns out to be the most Scottish branch of the whole tree. Her great-great-grandfather James William McCunn was born in Derry, in the north of Ireland, in 1811. He was an Ulster Presbyterian, the people Americans call Scots-Irish, and he settled in Indiana County, Pennsylvania. His son John Calvin McCunn married Harriet Elder in the Presbyterian church there in 1867, then moved west to Page County, Iowa.",
+   "The Flemings came the same way a generation earlier. Thomas Plummer Fleming was born in Uniontown, Pennsylvania, in 1827, and married Jane McFarland, daughter of Moses McFarland and Sally McClelland. Fleming, McFarland, McClelland, Elder and McCunn are all Scottish or Scots-Irish surnames. The Carmichaels, Helen's mother's family, came through North Carolina and Indiana before reaching Page County in the 1850s.",
+   "By the 1890s all of these families were in or near Clarinda. Helen Fleming was born there in 1926, the product of several Scots-Irish lines."],
+  lesson:{h:"Why the Scots-Irish left",html:`<p>Starting in 1609, the English crown settled Lowland Scots on confiscated land in Ulster, the north of Ireland. Their descendants stayed Presbyterian in a country with an established Anglican church, which barred them from many offices and taxed them to support it.</p>
+   <p>Rising rents, failed harvests and those restrictions sent waves of them to America through the 1700s and early 1800s, most landing at Philadelphia. They pushed into western Pennsylvania, then down into Virginia and the Carolinas and across to Ohio and Indiana.</p>`}},
+ {t:"From Limerick",w:"County Limerick, Ireland, to Gentry County, Missouri · 1836–1947",ppl:["johnhandley","wahandley","maryagnes"],
+  body:[
+   "John Handley was born in County Limerick on June 24, 1836. He married Margaret Burns, reportedly in Ireland, and by about 1864 they had a son, William Alphonsis, born in Pennsylvania. By 1870 the family was farming in Miller Township, Gentry County, Missouri, near Ford City.",
+   "William farmed that ground for the rest of his life and raised thirteen children with Mary Ann Magee. The eldest, Mary Agnes, was christened at St. Patrick's Church in Ford City in 1890 and married Fred W. Conrad in the same church in 1920. Her first son, William Alphonsis Conrad, was named for her father."],
+  lesson:{h:"The Great Famine",html:`<p>From 1845 to 1852 a blight destroyed Ireland's potato crop year after year. About a million people died and more than a million emigrated. Limerick, in the southwest, was hit hard.</p>
+   <p>John Handley was nine when it began and sixteen when it ended. He left about a decade later, part of a steady post-famine exodus that kept Irish emigration high for the rest of the century.</p>`}},
+ {fig:["nat1875","mar1876","census1900"],t:"Fourteen and Alone",w:"Germany to Stark County, Ohio · 1868",ppl:["jacob","addie","fredw"],
+  body:[
+   "In June 1868, a 14-year-old German boy named Jacob Conrad arrived in the United States. We know this from his naturalization papers, filed in the probate court of Stark County, Ohio, on September 28, 1875. They say he came before his eighteenth birthday and that he renounced his allegiance to \"Emperor William.\"",
+   "One online tree says his father, Johannes, died in 1870. Jacob married Adaline \"Addie\" Young of Ohio in 1876. They farmed in Tuscarawas County, Ohio, where their first children were born, and around 1888 moved to Skidmore in Nodaway County, Missouri, about 35 miles south of Clarinda. They had ten children. The 1900 census shows Jacob at 46 with eight of them still at home, including a 10-year-old named Fred.",
+   "Jacob died in Skidmore in 1909. We still don't know which German town he came from."],
+  lesson:{h:"Why young Germans left",html:`<p>In the 1860s German emigration ran at tens of thousands a year. Farms were too small to divide among sons, and Prussia's wars of 1864, 1866 and 1870 made military service a real prospect for any boy approaching his late teens.</p>
+   <p>When Jacob left in 1868 there was no Germany, only a collection of German states. By the time he was naturalized in 1875, they had been united as the German Empire under Wilhelm I. That's the “Emperor William” on his papers.</p>`}},
+ {fig:["draft1917"],t:"Two Wars, Two Freds",w:"France, the Pacific and Clarinda · 1917–2014",ppl:["fredw","fredh"],
+  body:[
+   "Fred W. Conrad registered for the draft on June 5, 1917, a short, medium-build farmer from Skidmore with light brown eyes and dark brown hair. He served as a private in Headquarters Company, 356th Infantry, from April 1918 to June 1919. His 1919 discharge gives an address on Grant Street in Clarinda. He married Mary Agnes Handley the next spring.",
+   "Their middle son, Frederick Harrell \"Fred\" Conrad, graduated from Clarinda High School in 1942 and joined the Marines. He married Helen Fleming in Bakersfield, California, in June 1945, two months before the war ended.",
+   "Grandpa Fred spent most of his life as a watchmaker. A neighbor remembered that he repaired every clock and watch she owned. He farmed, worked maintenance at Iowa Western Community College, went back to watches in retirement, and was buried in Clarinda with military rites in 2014, three days before his 90th birthday."],
+  lesson:{h:"The 356th Infantry",html:`<p>The 356th Infantry belonged to the 89th Division, a National Army division of draftees from Missouri, Kansas and neighboring states, trained at Camp Funston, Kansas.</p>
+   <p>The division went to France in June 1918 and fought at St. Mihiel and in the Meuse-Argonne offensive that fall. Fred W.'s service dates fit that timeline. His service record would show whether he went overseas with them.</p>`}},
+ {t:"Clarinda",w:"Page County, Iowa · 1860s to today",ppl:["thomasplummer","margaretmccunn","fredw","fredh","helen","delphia"],
+  body:[
+   "Almost every line in this book passes through one small town in southwest Iowa. The McCunns and Flemings were there by the late 1800s. Margaret Jane McCunn was born in Clarinda around 1868, and Thomas Plummer Fleming died there in 1893. William Carmichael married Nellie Brooks in Clarinda in 1897.",
+   "The Conrads settled there in the 1920s, after Fred W. came home from the Army; Grandpa Fred was born there in 1924. The Handleys were a short drive south in Missouri. Fred and Helen spent 18 years on her family's Page County farm before moving into town.",
+   "The Scott and Hunt side reached Clarinda too. Grandma Delphia worked at the Clarinda Mental Health Institute and retired from its psychiatric care department in 1977. Four generations of our family are buried in Clarinda Cemetery."],
+  lesson:{h:"A county seat on the prairie",html:`<p>Clarinda was laid out in the 1850s as the seat of Page County, near the Nodaway River and just north of the Missouri line. Farm families from Ohio, Pennsylvania and Indiana poured into southwest Iowa after the Civil War, many of them the grandchildren of Scots-Irish and German immigrants.</p>
+   <p>The state hospital opened there in 1888 and remained one of the town's largest employers for generations.</p>`}}
+];
+/* ---------- mysteries ---------- */
+const CASES=[
+ {h:"Which Scotland?",p:"The Scott line stops at William Scott Sr. in Virginia around 1720. A family history says his father came from the Highlands, but no record names him.",n:"Best next step: a Y-DNA test from a male Scott in the direct line."},
+ {h:"Jacob's hometown",p:"Jacob Conrad's papers say only “Germany.” One tree says Frankfurt, but that is often a placeholder for “somewhere in Hesse.”",n:"Best next step: Ohio church records from the 1870s and German emigration lists for 1868."},
+ {h:"How close to Devil Anse?",p:"Maude Hatfield's grandfather is buried in the Anderson Hatfield Memorial Cemetery and had a Vance mother, like Devil Anse. The exact relationship is unproven.",n:"Best next step: trace Jeremiah Hatfield's parents and siblings."},
+ {h:"Two dates for Fred W.",p:"His FamilySearch record and a 1959 obituary say he died October 5. His gravestone seems to read November 5. Mary Agnes's stone also differs from her record by three days.",n:"Best next step: Iowa death certificates for 1959 and 1966."}
+];
+const FSC="Image courtesy of FamilySearch.";
+const DOCS={
+ census1880:{pos:"50% 92%",src:"img/census-1880.jpg",t:"1880 U.S. Census · Blackberry, Pike County, Kentucky",
+  c:"Near the bottom: <b>Daniel Scott</b>, 64, farmer, with his wife <b>Nancy</b>, 60. The next household is his son <b>Henderson</b>, 28, farmer, with <b>Vicy</b>, 26, daughter <b>Alley</b> (our Allie), 6, and a baby son not yet named. A McCoy household appears a few lines above. Randolph McCoy was counted in the same district.",
+  url:"https://www.familysearch.org/ark:/61903/1:1:MCZP-6V9"},
+ nat1875:{src:"img/naturalization-1875.jpg",t:"Naturalization of Jacob Conrad · Stark County, Ohio, 28 September 1875",
+  c:"<b>Jacob Conrad</b>, “an alien native of Germany,” age 21 on 8 December last, who “first arrived in the United States in the month of June A.D. 1868” before his eighteenth birthday. His witness was <b>Peter Wolf</b>. He renounced all allegiance to <b>Emperor William</b>.",
+  url:"https://www.familysearch.org/ark:/61903/1:1:QGKD-1W9R"},
+ mar1876:{src:"img/marriage-1876.jpg",t:"Marriage license and return · Stark County, Ohio, May 1876",
+  c:"<b>Jacob Conrad</b> applies for a license to marry <b>Addie Young</b>, swearing he is over 21, she is over 18, and they are not related. The right column certifies they were married on <b>20 May 1876</b> by a justice of the peace.",
+  url:"https://www.familysearch.org/ark:/61903/1:1:XZ6N-4M9"},
+ census1900:{src:"img/census-1900.jpg",t:"1900 U.S. Census · Skidmore village, Nodaway County, Missouri",
+  c:"The Conrad children in Jacob's household, lines 51 to 57: Louis, Henry, Pathrine (Katherine), <b>Fred W.</b>, age 9, Joseph, Effie and Minnie. Every one lists a father born in <b>Germany</b> and a mother born in <b>Ohio</b>.",
+  url:"https://www.familysearch.org/ark:/61903/1:1:M38M-2QW"},
+ draft1917:{src:"img/draft-card-1917.jpg",t:"WWI draft registration of Fred W. Conrad · Skidmore, Missouri, 5 June 1917",
+  c:"<b>Fred W. Conrad</b>, 27, born 10 September 1889 at Skidmore. Single, a farm hand working for J. L. Tison at Skidmore. The back records him as short, of medium build, with light brown eyes and dark brown hair.",
+  url:"https://www.familysearch.org/ark:/61903/1:1:W888-DBPZ"}
+};
+const FG="https://www.findagrave.com/memorial/", IG="https://iowagravestones.org/view.php?id=";
+const GRAVES=[
+ {h:"Clarinda Cemetery",l:"Clarinda, Page County, Iowa",tip:"About 90 miles from Omaha. Seven of our ancestors and a great-uncle rest here, the most of any cemetery.",
+  p:[["Frederick Harrell \"Fred\" Conrad","1924–2014",null],["Helen Maxine Fleming Conrad","1926–2010",null],["Fred W. Conrad, WWI veteran marker","1889–1959",IG+"823090"],["Mary Agnes Handley Conrad","1889–1966",IG+"823089"],["Conrad family stone","",IG+"823088"],["William A. & Leona M. Conrad (great-uncle)","1922–1994",IG+"823320"],["Charles May Fleming","1853–1913",null],["Margaret Jane McCunn Fleming","1868–1907",null],["Thomas Plummer Fleming","1827–1893",null],["Elva Mae Carmichael Fleming","1897–1983",null],["John Calvin McCunn","1841–1883",null],["Harriet E. Elder McCunn","1848–1932",null]]},
+ {h:"National Memorial Cemetery of Arizona",l:"Phoenix, Arizona · Section 78, Site 370",tip:"A national cemetery, open daily.",
+  p:[["Delphia Rosetta Hunt Renfro","1934–2021",FG+"230693810"]]},
+ {h:"Pine Street Cemetery",l:"Gallipolis, Gallia County, Ohio",
+  p:[["Buff Scott Sr.","1903–1985",FG+"13649781"],["Maude Hatfield Scott","1904–1970",FG+"13649780"],["Helen Jewell Scott Hunt (great-aunt)","1924–1989",FG+"208488072"]]},
+ {h:"Julius Scott Cemetery",l:"Hardy, Pike County, Kentucky",tip:"A family cemetery named for Allie's brother Julius.",
+  p:[["Alice \"Allie\" Scott","1873–1932",FG+"154749096"],["Emzy B. Scott","1875–1949",FG+"168441560"],["Henderson Maynard Scott","1852–1915",FG+"76117958"]]},
+ {h:"Scott Cemetery",l:"Belfry, Pike County, Kentucky",p:[["William \"Billy\" Scott","1784–1864",FG+"12259089"]]},
+ {h:"Farley Cemetery",l:"Hatfield, Pike County, Kentucky",p:[["Nancy Stafford Scott","1816–1887",null]]},
+ {h:"Anderson Hatfield Memorial Cemetery",l:"McCarr, Pike County, Kentucky",p:[["George Oliver Hatfield","1844–1917",null]]},
+ {h:"Buskirk Cemetery",l:"Buskirk, Pike County, Kentucky",p:[["James Hatfield","1875–1945",null]]},
+ {h:"St. Patrick's Cemetery",l:"Ford City, Gentry County, Missouri",tip:"The Handleys' Catholic parish, where Fred W. and Mary Agnes married in 1920.",
+  p:[["John Handley","1836–1902",null],["William Alphonsis Handley","1864–1947",null]]},
+ {h:"Skidmore, Missouri",l:"Nodaway County, Missouri",p:[["Jacob Conrad","1853–1909",null]]},
+ {h:"Memory Cemetery",l:"Page Center and New Market, Iowa",p:[["William Benson Carmichael","1872–1937",null],["Nellie May Brooks Carmichael","1878–1967",null],["William Carmichael","1838–1905",null]]},
+ {h:"Allegheny Cemetery",l:"Pittsburgh, Pennsylvania",p:[["Mathew Fleming","1792–1871",null]]}
+];
+
+
+/* ---------- start here ladders ---------- */
+const LADDERS=[
+ {b:"scott",h:"Mom's dad's line",sub:"Grandpa Buff Scott Jr.",steps:[
+  ["Mom","Jean Scott","",""],["Grandpa","Buff Scott Jr.","born 1927, Hardy, Kentucky",""],["Great-grandpa","Buff Scott Sr.","1903–1985 · Kentucky, then Ohio",""],
+  ["2nd great-grandma","Allie Scott","1873–1932 · Pike Co., Kentucky",""],["3rd great-grandpa","Henderson Scott","1852–1915 · Pike Co., Kentucky",""],
+  ["4th great-grandpa","Daniel Scott","1815–1885 · son of Elizabeth McCoy",""],["5th great-grandpa","Billy Scott","1784–1864 · moved from Virginia to Kentucky",""],
+  ["6th great-grandpa","Axton Scott","about 1755–1793 · Bedford Co., Virginia",""],["7th great-grandpa","William Scott Sr.","about 1720–1794 · Maryland, then Virginia","imm"],
+  ["Before that","Scotland?","Family tradition says his father came from the Scottish Highlands. Not proven.","end"]],
+  also:"Also on this side: the McCoys and Hatfields. See the next page."},
+ {b:"hunt",h:"Mom's mom's line",sub:"Grandma Delphia Hunt",steps:[
+  ["Mom","Jean Scott","",""],["Grandma","Delphia Hunt","1934–2021 · Kentucky, Iowa, Arizona",""],["Great-grandpa","Kinzie Bee Hunt","1898–1959 · Mouthcard, Kentucky",""],
+  ["2nd great-grandpa","James Madison Hunt","1861–1940 · Mouthcard, Kentucky",""],["3rd great-grandpa","William Hunt","1829–1913 · Pike Co., Kentucky",""],
+  ["Before that","Not found yet","The Hunts were in the Kentucky mountains by the 1850s. Where they came from is the next thing to research.","end"]],
+  also:"Grandma Delphia's brother Ellis married Grandpa Buff's sister Helen, so the Hunts and Scotts were tied together twice."},
+ {b:"conrad",h:"Dad's dad's line",sub:"Grandpa Fred Conrad",steps:[
+  ["Dad","Stephen Conrad","",""],["Grandpa","Fred Conrad","1924–2014 · Clarinda, Iowa · WWII Marine",""],["Great-grandpa","Fred W. Conrad","1889–1959 · Skidmore, Missouri · WWI soldier",""],
+  ["2nd great-grandpa","Jacob Conrad","1853–1909 · arrived from Germany in 1868 at age 14","imm"],
+  ["Before that","Germany","His exact hometown is not known yet.","end"]],
+  also:"Grandpa Fred's mother was Mary Agnes Handley. Her grandfather John Handley was born in County Limerick, Ireland, in 1836. That is our Irish line."},
+ {b:"fleming",h:"Dad's mom's line",sub:"Grandma Helen Fleming",steps:[
+  ["Dad","Stephen Conrad","",""],["Grandma","Helen Fleming","1926–2010 · Clarinda, Iowa",""],["Great-grandpa","Warren Fleming","1893–1973 · Page Co., Iowa",""],
+  ["2nd great-grandpa","Charles May Fleming","1853–1913 · Missouri, then Clarinda",""],["3rd great-grandpa","Thomas Plummer Fleming","1827–1893 · Pennsylvania, then Clarinda",""],
+  ["4th great-grandpa","Mathew Fleming","1792–1871 · Pennsylvania",""],
+  ["Before that","Ulster Scots","A Scots-Irish Pennsylvania family by the late 1700s.","end"]],
+  also:"Grandma Helen's grandmother was a McCunn. Her great-grandfather James McCunn was born in Derry, Ulster, in 1811. Her mother was a Carmichael, a Scottish family that came through North Carolina."}
+];
+function buildLadders(){document.getElementById("ladders").innerHTML=LADDERS.map(l=>`<div class="ladder" style="color:${brColor(l.b)}"><h3>${l.h}<small>${l.sub}</small></h3>
+  ${l.steps.map(([r,n,m,cls],i)=>`${i?`<div class="arrow">parent</div>`:""}<div class="step ${cls}"><span class="r">${r}</span><b>${esc(n)}</b>${m?`<span class="m">${esc(m)}</span>`:""}</div>`).join("")}
+  <div class="also">${esc(l.also)}</div></div>`).join("")}
+
+/* ---------- feud timeline ---------- */
+function drawFeudTime(){
+  const svg=document.getElementById("feudTime"),NS="http://www.w3.org/2000/svg",X=y=>40+(y-1780)*(820/160);
+  const el=(t,a,txt)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;svg.appendChild(e);return e};
+  el("rect",{x:0,y:0,width:900,height:230,fill:"var(--paper-2)"});
+  el("rect",{x:X(1865),y:70,width:X(1891)-X(1865),height:80,fill:"var(--maroon)",opacity:.14});
+  el("text",{x:(X(1865)+X(1891))/2,y:88,"text-anchor":"middle","font-family":"Zilla Slab, Georgia, serif","font-weight":700,"font-size":13,fill:"var(--maroon)","letter-spacing":"2"},"THE FEUD");
+  el("text",{x:(X(1865)+X(1891))/2,y:104,"text-anchor":"middle","font-family":"Source Serif 4, Georgia, serif","font-size":12,fill:"var(--maroon)"},"1865–1891");
+  el("line",{x1:X(1780),x2:X(1940),y1:150,y2:150,stroke:"var(--ink)","stroke-width":2});
+  for(let y=1780;y<=1940;y+=20){el("line",{x1:X(y),x2:X(y),y1:150,y2:158,stroke:"var(--ink)","stroke-width":1.5});el("text",{x:X(y),y:174,"text-anchor":"middle","font-family":"Source Serif 4, Georgia, serif","font-size":12.5,fill:"var(--muted)"},String(y))}
+  const ev=[[1810,"var(--maroon)","McCoy blood enters","Billy Scott marries Elizabeth McCoy",-1],
+            [1880,"var(--scott)","1880 census","Scotts and Randolph McCoy in one district",1],
+            [1888,"var(--maroon)","1888 raid","McCoy cabin burned",-1,"end"],
+            [1923,"var(--green)","Hatfield blood enters","Buff Sr. marries Maude, 1923",-1],
+            [1927,"var(--gold)","Grandpa Buff born","both McCoy and Hatfield",1]];
+  for(const [y,c,t1,t2,side,force] of ev){
+    el("circle",{cx:X(y),cy:150,r:7,fill:c,stroke:"var(--paper)","stroke-width":2});
+    const ty=side<0?40:205, anchor=force||(y>1915?"end":(y<1800?"start":"middle")), tx=force==="end"?X(y)-6:(y>1915?X(y)+8:(y<1800?X(y)-8:X(y)));
+    el("line",{x1:X(y),x2:X(y),y1:side<0?52:158,y2:side<0?143:188,stroke:c,"stroke-width":1,"stroke-dasharray":"3 3"});
+    el("text",{x:tx,y:side<0?ty-14:ty,"text-anchor":anchor,"font-family":"Zilla Slab, Georgia, serif","font-weight":700,"font-size":13.5,fill:"var(--ink)"},t1);
+    el("text",{x:tx,y:side<0?ty+2:ty+16,"text-anchor":anchor,"font-family":"Source Serif 4, Georgia, serif","font-size":12,fill:"var(--muted)"},t2);
+  }
+}
+
+/* ---------- history timeline ---------- */
+const TL=[
+ ["era","","1700s · Scotland to the colonies"],
+ ["world","1715","Jacobite risings in Scotland (1715 and 1745) fail. Highland clans are broken up and many Scots leave for America."],
+ ["scott","c. 1720","William Scott Sr. is born, probably in Maryland. Family tradition says his father came from the Scottish Highlands."],
+ ["scott","1763","William Scott buys land on Goose Creek, near the foot of the Blue Ridge, in Bedford County, Virginia."],
+ ["world","1775","The American Revolution begins."],
+ ["scott","1776","Axton Scott marries Dorcas Wright, the year of the Declaration of Independence. Elizabeth McCoy's father, Old William McCoy, serves in the war."],
+ ["scott","1784","Billy Scott is born in Bedford County, Virginia."],
+ ["scott","c. 1810","Billy Scott marries Elizabeth McCoy and settles in the Tug Valley of eastern Kentucky. McCoy blood enters our family."],
+ ["era","","1800s · Moving west"],
+ ["fleming","1811","James McCunn is born in Derry, in Ulster, the Scottish north of Ireland."],
+ ["scott","1815","Daniel Scott, son of Elizabeth McCoy, is born in what is now Pike County, Kentucky."],
+ ["scott","1825","Randolph McCoy, Daniel Scott's first cousin and the future feud leader, is born."],
+ ["fleming","1827","Thomas Plummer Fleming is born in Uniontown, Pennsylvania."],
+ ["conrad","1836","John Handley is born in County Limerick, Ireland."],
+ ["world","1845","The Great Famine begins in Ireland. Over seven years about a million people die and more than a million emigrate."],
+ ["scott","1852","Henderson Scott is born in Pike County, Kentucky."],
+ ["conrad","1853","Jacob Conrad is born in Germany."],
+ ["world","1861","The Civil War begins. The Tug Valley is split between Union and Confederate sympathizers."],
+ ["scott","1865","Asa Harmon McCoy, Randolph's brother and Elizabeth McCoy's nephew, is killed. Historians mark this as the start of the feud."],
+ ["conrad","1868","Jacob Conrad, age 14, arrives in America in June and settles in Ohio."],
+ ["world","1871","The German states unite as the German Empire under Kaiser Wilhelm I."],
+ ["conrad","1875","Jacob Conrad becomes a U.S. citizen in Stark County, Ohio, renouncing allegiance to “Emperor William.”"],
+ ["conrad","1876","Jacob Conrad marries Addie Young in Stark County, Ohio."],
+ ["scott","1878","The Hog Trial. Preacher Anse Hatfield presides as Randolph McCoy accuses a Hatfield of stealing a hog."],
+ ["scott","1880","The census finds Daniel Scott and his son Henderson's family in the Blackberry district of Pike County, the same district as Randolph McCoy."],
+ ["scott","1882","Election Day fight. Ellison Hatfield is killed and three of Randolph's sons are executed in revenge."],
+ ["scott","1888","New Year's Night raid. Hatfields burn the McCoy cabin. Family lore says Henderson's daughter Parlee had stayed there the night before."],
+ ["conrad","c. 1888","Jacob Conrad moves his family from Ohio to Skidmore, Missouri, about 35 miles south of Clarinda."],
+ ["conrad","1889","Fred W. Conrad is born in Skidmore, Missouri. Mary Agnes Handley is born the same year in King City, Missouri."],
+ ["world","1891","The feud's violence ends."],
+ ["era","","1900s · Two wars and a family"],
+ ["scott","1903","Buff Scott Sr. is born in Pike County, Kentucky."],
+ ["scott","1904","Maude Hatfield is born in Pike County, Kentucky."],
+ ["world","1917","The United States enters World War I."],
+ ["conrad","1917","Fred W. Conrad, a 27-year-old farm hand in Skidmore, registers for the draft. He serves with the 356th Infantry until 1919."],
+ ["conrad","1920","Fred W. Conrad marries Mary Agnes Handley at St. Patrick's Church, Ford City, Missouri. By 1924 they are living in Clarinda, Iowa."],
+ ["scott","1923","Buff Scott Sr. marries Maude Hatfield. Hatfield blood enters our family."],
+ ["conrad","1924","Grandpa Fred Conrad is born in Clarinda, Iowa."],
+ ["fleming","1926","Grandma Helen Fleming is born in Clarinda, Iowa."],
+ ["scott","1927","Grandpa Buff Scott Jr. is born in Hardy, Kentucky, carrying both McCoy and Hatfield blood."],
+ ["world","1929","The Great Depression begins."],
+ ["hunt","1934","Grandma Delphia Hunt is born in Mouthcard, Pike County, Kentucky."],
+ ["world","1941","The United States enters World War II."],
+ ["conrad","1942","Grandpa Fred graduates from Clarinda High School and joins the Marines."],
+ ["conrad","1945","Grandpa Fred marries Grandma Helen in Bakersfield, California, two months before the war ends."],
+ ["era","","Coming together"],
+ ["hunt","1977","Grandma Delphia retires from the Clarinda Mental Health Institute in Clarinda, Iowa."],
+ ["hunt","2019","Grandma Delphia moves to Arizona to be near family."],
+ ["hunt","2021","Grandma Delphia is buried at the National Memorial Cemetery of Arizona in Phoenix."]
+];
+function buildTimeline(){document.getElementById("tl").innerHTML=TL.map(([k,y,t])=>k==="era"?`<li class="era"><span class="y"></span><span class="t">${esc(t)}</span></li>`:
+  `<li class="${k==="world"?"world":""}"${k!=="world"?` style="--dot:${brColor(k)}"`:""}><span class="y">${esc(y)}</span><span class="t">${esc(t)}</span></li>`).join("")}
+
+const ROMAN=["I","II","III","IV","V","VI","VII","VIII","IX","X"];
+function rel(id){
+  const depth={};(function walk(x,d){if(!x||!P[x])return;depth[x]=Math.min(depth[x]??99,d);walk(P[x].f,d+1);walk(P[x].m,d+1)})("jamey",0);
+  const d=depth[id], s=P[id].sx==="m";
+  if(d===0)return "Compiler";
+  if(d===1)return s?"Father":"Mother";
+  if(d===2)return s?"Grandfather":"Grandmother";
+  if(d===3)return s?"Great-grandfather":"Great-grandmother";
+  const n=d-2, suf=n===2?"nd":n===3?"rd":"th";
+  return `${n}${suf} great-${s?"grandfather":"grandmother"}`;
+}
+const brColor=b=>b==="all"?"var(--ink)":`var(--${b})`;
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+/* ---------- route map ---------- */
+const MAP={
+ st:{
+  high:{x:925,y:58,l:"Scottish Highlands",yr:"before 1720",hollow:true,ly:-14},
+  derry:{x:925,y:150,l:"Derry, Ulster",yr:"b. 1811",ly:-14},
+  lim:{x:925,y:238,l:"Co. Limerick",yr:"b. 1836",ly:-14},
+  ger:{x:925,y:328,l:"Germany",yr:"left 1868",ly:-14},
+  md:{x:560,y:58,l:"Maryland",yr:"early 1700s",hollow:true,ly:-14},
+  bed:{x:455,y:58,l:"Bedford Co., Va.",yr:"1760s",ly:-14},
+  pike:{x:345,y:150,l:"Pike Co., Ky.",yr:"c. 1810",ly:-16,lx:-40,inter:true},
+  gal:{x:230,y:90,l:"Gallipolis, Ohio",yr:"Buff Sr.",ly:-14},
+  ipa:{x:560,y:150,l:"Indiana Co., Pa.",yr:"c. 1840",ly:-14},
+  pa:{x:560,y:238,l:"Pennsylvania",yr:"c. 1864",ly:-14},
+  stark:{x:560,y:328,l:"Stark Co., Ohio",yr:"1868–75",ly:-14},
+  gent:{x:470,y:238,l:"Gentry Co., Mo.",yr:"by 1870",ly:22},
+  skid:{x:400,y:328,l:"Skidmore, Mo.",yr:"c. 1888",ly:20},
+  clar:{x:245,y:290,l:"Clarinda, Iowa",yr:"1860s–today",ly:30,inter:true},
+  phx:{x:110,y:150,l:"Phoenix, Ariz.",yr:"today",ly:-20,inter:true},
+  home:{x:60,y:250,l:"Our family",yr:"",ly:34,terminal:true}
+ },
+ lines:[
+  {b:"scott",p:["high","md","bed","pike","gal","phx","home"],dy:0},
+  {b:"hunt",p:["pike","clar","phx","home"],dy:5},
+  {b:"fleming",p:["derry","ipa","clar","home"],dy:-5},
+  {b:"conrad",p:["ger","stark","skid","clar","home"],dy:5},
+  {b:"conrad",p:["lim","pa","gent","clar"],dy:0,dash:true}
+ ]
+};
+function drawMap(){
+  const svg=document.getElementById("routeMap"), NS="http://www.w3.org/2000/svg";
+  const el=(t,a,parent=svg)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);parent.appendChild(e);return e};
+  el("rect",{x:0,y:0,width:1000,height:470,fill:"var(--paper)"});
+  el("rect",{x:640,y:0,width:220,height:470,fill:"var(--sea)"});
+  for(let i=0;i<9;i++){el("path",{d:`M650 ${40+i*48} q 25 -8 50 0 t 50 0 t 50 0 t 50 0`,fill:"none",stroke:"var(--sea-ink)","stroke-width":1,opacity:.45})}
+  const at=el("text",{x:750,y:452,"text-anchor":"middle","font-family":"Zilla Slab, Georgia, serif","font-weight":700,"font-size":18,fill:"var(--sea-ink)","letter-spacing":"6"});at.textContent="ATLANTIC";
+  const ow=el("text",{x:925,y:450,"text-anchor":"middle","font-family":"Zilla Slab, Georgia, serif","font-weight":700,"font-size":11,fill:"var(--muted)","letter-spacing":"3"});ow.textContent="OLD WORLD";
+  const nw=el("text",{x:330,y:450,"text-anchor":"middle","font-family":"Zilla Slab, Georgia, serif","font-weight":700,"font-size":11,fill:"var(--muted)","letter-spacing":"3"});nw.textContent="AMERICA";
+  for(const ln of MAP.lines){
+    const pts=ln.p.map(k=>{const s=MAP.st[k];return [s.x,s.y+ln.dy]});
+    let d=`M${pts[0][0]} ${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){
+      const [x0,y0]=pts[i-1],[x1,y1]=pts[i],dx=x1-x0,dy=y1-y0;
+      if(Math.abs(dy)<1||Math.abs(dx)<1){d+=` L${x1} ${y1}`;continue}
+      const diag=Math.min(Math.abs(dx),Math.abs(dy)), sx=Math.sign(dx), sy=Math.sign(dy);
+      const midx=x0+(dx-sx*diag)/2;
+      d+=` L${midx} ${y0} L${midx+sx*diag} ${y0+sy*diag} L${x1} ${y1}`;
+    }
+    el("path",{d,fill:"none",stroke:brColor(ln.b),"stroke-width":5,"stroke-linecap":"round","stroke-linejoin":"round","stroke-dasharray":ln.dash?"10 7":"none"});
+  }
+  for(const k in MAP.st){
+    const s=MAP.st[k];
+    if(s.terminal){el("rect",{x:s.x-14,y:s.y-14,width:28,height:28,fill:"var(--green)"});}
+    else el("circle",{cx:s.x,cy:s.y,r:s.inter?11:7,fill:s.hollow?"var(--paper-2)":"var(--paper)",stroke:"var(--ink)","stroke-width":s.inter?3:2.2,"stroke-dasharray":s.hollow?"3 3":"none"});
+    const t=el("text",{x:s.x+(s.lx||0),y:s.y+s.ly,"text-anchor":"middle","font-family":"Source Serif 4, Georgia, serif","font-size":14,"font-weight":600,fill:"var(--ink)"});t.textContent=s.l;
+    if(s.yr){const y=el("text",{x:s.x+(s.lx||0),y:s.y+s.ly+(s.ly<0?-15:15),"text-anchor":"middle","font-family":"Source Serif 4, Georgia, serif","font-style":"italic","font-size":12,fill:"var(--muted)"});y.textContent=s.yr;
+      if(s.ly<0){t.setAttribute("y",s.y+s.ly);y.setAttribute("y",s.y+s.ly-15)}}
+  }
+  document.getElementById("legend").innerHTML=Object.entries(BR).map(([k,v])=>`<span><i style="background:${brColor(k)}"></i>${v.label} · ${v.note}</span>`).join("")+
+   `<span><i style="background:repeating-linear-gradient(90deg,var(--conrad) 0 7px,transparent 7px 11px)"></i>Handley · Great-grandma Mary Agnes's Irish side</span>`;
+}
+
+/* ---------- tree ---------- */
+const W=204,H=44,COL=230,ROWH=52,PAD=14;
+let curBranch="all", selected="jamey";
+function drawTree(){
+  const root=curBranch==="all"?"jamey":BR[curBranch].root;
+  const pos={};let row=0;
+  const maxD=curBranch==="all"?3:99;
+  (function place(id,d){const p=P[id];const ps=d<maxD?[p.f,p.m].filter(x=>x&&P[x]):[];let y;
+    if(!ps.length){y=row++*ROWH}else{const ys=ps.map(k=>place(k,d+1));y=(ys[0]+ys[ys.length-1])/2}
+    pos[id]={x:d*COL,y};return y})(root,0);
+  const maxX=Math.max(...Object.values(pos).map(p=>p.x))+W+PAD*2, maxY=row*ROWH+PAD*2;
+  const svg=document.getElementById("treeSvg");svg.setAttribute("width",maxX);svg.setAttribute("height",maxY);svg.setAttribute("viewBox",`0 0 ${maxX} ${maxY}`);
+  let html="";
+  for(const id in pos){const p=P[id];for(const par of [p.f,p.m]){if(!pos[par])continue;
+    const a=pos[id],b=pos[par],x0=a.x+W+PAD,y0=a.y+H/2+PAD,x1=b.x+PAD,y1=b.y+H/2+PAD,mx=x0+(x1-x0)/2;
+    html+=`<path class="link" d="M${x0} ${y0} H${mx} V${y1} H${x1}"/>`}}
+  for(const id in pos){const p=P[id],q=pos[id];
+    const col=p.c==="living"?"var(--living)":brColor(p.b==="all"?"all":p.b);
+    const dash=p.c==="probable"?"6 4":p.c==="lore"?"2 3":"none";
+    const nm=p.n.length>24?p.n.replace(/".*?" /,""):p.n;
+    const nm2=nm.length>27?nm.slice(0,26)+"…":nm;
+    html+=`<g class="node${id===selected?" sel":""}" data-id="${id}" tabindex="0" role="button" aria-label="${p.n.replace(/"/g,"&quot;")}" transform="translate(${q.x+PAD},${q.y+PAD})">
+      <rect class="box" width="${W}" height="${H}" stroke="${col}" stroke-dasharray="${dash}"/>
+      <rect x="0" y="0" width="6" height="${H}" fill="${col}"/>
+      <text class="nm" x="14" y="19">${esc(nm2)}</text>
+      <text class="yrs" x="14" y="35">${esc(p.c==="living"?"living":(p.y||"dates unknown"))}</text></g>`}
+  svg.innerHTML=html;
+  const sc=document.getElementById("treeScroll");sc.scrollLeft=0;sc.scrollTop=Math.max(0,pos[root].y+PAD+H/2-sc.clientHeight/2);
+  svg.querySelectorAll(".node").forEach(g=>{g.addEventListener("click",()=>select(g.dataset.id));
+    g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(g.dataset.id)}})});
+}
+function select(id,scroll){
+  selected=id;const p=P[id];
+  document.querySelectorAll("#treeSvg .node").forEach(g=>g.classList.toggle("sel",g.dataset.id===id));
+  const d=document.getElementById("detail"), col=p.c==="living"?"var(--living)":brColor(p.b);
+  const side=p.b==="all"?"":`${BR[p.b].label} side`;
+  d.innerHTML=`<div class="rel" style="color:${col}">${esc(rel(id))}${side?" · "+side:""}</div>
+    <h3>${esc(p.n)}</h3>
+    <span class="badge ${p.c==="proven"?"":p.c}">${CONF[p.c]}</span>
+    ${p.c==="living"?`<p class="facts">Living relatives are listed by name only.</p>`:
+     `<div class="facts">${p.y?`<span>${esc(p.y)}</span>`:""}${p.pl?`<span>${esc(p.pl)}</span>`:""}</div>
+      ${p.s?`<p>${esc(p.s)}</p>`:`<p class="facts"><i>No story recorded yet.</i></p>`}
+      ${p.src?`<a href="${p.src}" target="_blank" rel="noopener">View source record ↗</a>`:""}`}`;
+  if(scroll){const g=document.querySelector(`#treeSvg .node[data-id="${id}"]`);if(g)g.scrollIntoView({block:"center",inline:"center",behavior:"smooth"})}
+}
+function setBranch(b){curBranch=b;document.querySelectorAll("#chips .chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.b===b?"true":"false"));drawTree();
+  if(!document.querySelector(`#treeSvg .node[data-id="${selected}"]`))select(b==="all"?"jamey":BR[b].root);else select(selected)}
+function buildChips(){
+  const c=document.getElementById("chips");
+  c.innerHTML=`<button class="chip" data-b="all" aria-pressed="true">Overview</button>`+
+   Object.entries(BR).map(([k,v])=>`<button class="chip" data-b="${k}" aria-pressed="false"><i style="background:${brColor(k)}"></i>${v.label}</button>`).join("");
+  c.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>setBranch(b.dataset.b)));
+}
+function goTo(id){
+  const b=P[id].b;setBranch(b==="all"?"all":b);select(id,false);
+  document.getElementById("tree").scrollIntoView({behavior:"smooth"});
+  setTimeout(()=>select(id,true),450);
+}
+
+/* ---------- pages ---------- */
+const FL=["tl","tr","bl","br"].map(c=>`<svg class="fl ${c}" aria-hidden="true"><use href="#flo"/></svg>`).join("");
+function figHTML(id){const d=DOCS[id];return `<figure class="doc"><button type="button" data-doc="${id}" aria-label="Open full size: ${esc(d.t)}"><img src="${d.src}" alt="${esc(d.t)}"${d.pos?` style="object-position:${d.pos}"`:""}></button>
+  <figcaption><b>${esc(d.t)}.</b> ${d.c} <a href="${d.url}" target="_blank" rel="noopener">Record ↗</a> <span class="credit">${FSC}</span></figcaption></figure>`}
+function buildBook(){
+  document.getElementById("chapters").innerHTML=CH.map((c,i)=>`<section class="page" id="ch${i+1}"><div class="frame">
+    <div class="phead"><div class="eyebrow">Chapter ${ROMAN[i]}</div><h2>${esc(c.t)}</h2><div class="where">${esc(c.w)}</div><div class="grule"></div></div>
+    <div class="ch-grid">
+      <div class="ch-main">${c.body.map(p=>`<p>${esc(p)}</p>`).join("")}
+        ${c.note?`<div class="family-note"><b>FAMILY LORE · </b>${esc(c.note)}</div>`:""}
+        ${(c.fig||[]).map(figHTML).join("")}</div>
+      <div class="ch-side">
+        <div class="history"><span class="k">History note</span><h4>${c.lesson.h}</h4>${c.lesson.html}</div>
+        <div class="intree"><h4>In the tree</h4><div class="people">${c.ppl.map(id=>`<button type="button" data-go="${id}">${esc(P[id].n)}</button>`).join("")}</div></div>
+      </div>
+    </div></div></section>`).join("");
+  document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>goTo(b.dataset.go)));
+}
+function decorate(){
+  // frame flourishes, running heads and folios, in reading order
+  const pages=[...document.querySelectorAll(".book .page")];
+  pages.forEach((pg,n)=>{const f=pg.querySelector(".frame");
+    f.insertAdjacentHTML("afterbegin",FL+`<div class="runhead"><span>Four Roads, One Family</span><span>The Conrad &amp; Scott Family Record</span></div>`);
+    f.insertAdjacentHTML("beforeend",`<div class="folio">${n+1}</div>`);pg.dataset.folio=n+1});
+  const fol=id=>document.getElementById(id).dataset.folio;
+  const rows=[["","A Family Record","Four roads, one family","opener"],["","Start Here","How you are connected","start"],["","Hatfields and McCoys","How we are both","feud"],["","The Routes","How each line got here","routes"],["","The Tree","Every direct ancestor we have found","tree"],
+    ...CH.map((c,i)=>[ROMAN[i],c.t,c.w,"ch"+(i+1)]),
+    ["","The Timeline","Our family in history","timeline"],["","The Archive","The original records","archive"],["","Where They Rest","Family graves","graves"],["","Unsolved","Where the records go quiet","mysteries"],["","Sources","How this was made","sources"]];
+  document.getElementById("toc").innerHTML=rows.map(([r,t,s,id])=>`<li><a href="#${id}"><span class="rn">${r||"✦"}</span><span class="tt">${esc(t)}<span class="sub">${esc(s)}</span></span><span class="pg">${fol(id)}</span></a></li>`).join("");
+}
+function buildDocs(){document.getElementById("docs").innerHTML=Object.keys(DOCS).map(figHTML).join("")}
+function buildCases(){document.getElementById("cases").innerHTML=CASES.map(c=>`<div class="case"><h3>${c.h}</h3><p>${c.p}</p><div class="next">${c.n}</div></div>`).join("")}
+function buildGraves(){document.getElementById("graveList").innerHTML=GRAVES.map(g=>`<div class="grave"><h3>${g.h}</h3><div class="loc">${g.l}</div>
+  <ul>${g.p.map(([n,y,u])=>`<li><span>${esc(n)}${y?` <span class="yrs">${y}</span>`:""}</span>${u?`<a href="${u}" target="_blank" rel="noopener">Photo ↗</a>`:""}</li>`).join("")}</ul>
+  ${g.tip?`<div class="tip">${g.tip}</div>`:""}</div>`).join("")}
+
+let lbReturn=null;
+function openDoc(id,btn){const d=DOCS[id],lb=document.getElementById("lightbox");lbReturn=btn;
+  document.getElementById("lbTitle").textContent=d.t;document.getElementById("lbStage").innerHTML=`<img src="${d.src}" alt="${esc(d.t)}">`;
+  lb.hidden=false;document.getElementById("lbClose").focus()}
+function closeDoc(){document.getElementById("lightbox").hidden=true;if(lbReturn)lbReturn.focus()}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-doc]");if(b)openDoc(b.dataset.doc,b)});
+document.getElementById("lbClose").addEventListener("click",closeDoc);
+document.getElementById("lightbox").addEventListener("click",e=>{if(e.target.id==="lightbox")closeDoc()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!document.getElementById("lightbox").hidden)closeDoc()});
+
+drawMap();buildLadders();drawFeudTime();buildTimeline();buildChips();buildBook();buildDocs();buildGraves();buildCases();decorate();drawTree();select("jamey");
+if(location.hash){const t=document.getElementById(location.hash.slice(1));if(t)t.scrollIntoView()}
+</script>
+
+</body></html>
