@@ -8,25 +8,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 <style>
-/* Layout: a leather-bound family record in the "Blessed With This Time Together" style. A cover, a contents page, then gold-framed parchment pages with running heads and folios. */
+/* Layout: a navy, gold-framed family record in the "Blessed With This Time Together" style. A cover, a contents page, then gold-framed parchment pages with running heads and folios. */
 :root{
-  --desk:#CDBB8E; --paper:#F3E6C6; --paper-2:#EADAB3; --ink:#2C2418; --muted:#6B5F4D; --rule:#D2BC8A;
-  --gold:#B08A3A; --green:#1F4A37; --maroon:#7B2730; --leather:#4A2C19; --leather-hi:#6E4428; --leather-ink:#E6C77E;
-  --sea:#D3DBD0; --sea-ink:#71878A;
-  --scott:#2B4F7A; --hunt:#4B6A2A; --conrad:#7A3A5C; --fleming:#94660F; --living:#8C8370;
+  --desk:#C9CFD6; --paper:#F7F4EC; --paper-2:#ECE7DA; --ink:#1E2430; --muted:#596170; --rule:#CFC6AE;
+  --gold:#9C7A2C; --green:#1F4A37; --maroon:#8B2B2B; --leather:#1B2A41; --leather-hi:#2C4262; --leather-ink:#E2C67E;
+  --sea:#DCE3E7; --sea-ink:#5E7A86;
+  --scott:#2B4F7A; --hunt:#4B6A2A; --conrad:#1F6F6B; --fleming:#94660F; --living:#7E8490; --glow:rgba(255,255,255,.35);
   --display:"Zilla Slab","Rockwell","Roboto Slab",Georgia,serif;
   --body:"Source Serif 4","Iowan Old Style",Georgia,serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --desk:#15100B; --paper:#241C13; --paper-2:#2E2418; --ink:#EDE2C8; --muted:#B3A585; --rule:#4A3C26;
-  --gold:#C9A24B; --green:#A3CDB0; --maroon:#E39AA0; --leather:#3A2213; --leather-hi:#5A3820; --leather-ink:#E6C77E;
-  --sea:#1C2A2C; --sea-ink:#6E8F95;
-  --scott:#8DB3DE; --hunt:#A9C77A; --conrad:#D99BBC; --fleming:#E2B65E; --living:#8F8670; color-scheme:dark}}
+  --desk:#0D1219; --paper:#161D28; --paper-2:#1E2734; --ink:#E8E6DF; --muted:#A5ABB6; --rule:#2E3A4B;
+  --gold:#D4AF5A; --green:#9FD0B2; --maroon:#E8A06E; --leather:#101A2B; --leather-hi:#22324D; --leather-ink:#E2C67E;
+  --sea:#172430; --sea-ink:#6E8F9E;
+  --scott:#8DB3DE; --hunt:#A9C77A; --conrad:#7FCBC4; --fleming:#E2B65E; --living:#8F95A0; --glow:rgba(141,179,222,.05); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --desk:#15100B; --paper:#241C13; --paper-2:#2E2418; --ink:#EDE2C8; --muted:#B3A585; --rule:#4A3C26;
-  --gold:#C9A24B; --green:#A3CDB0; --maroon:#E39AA0; --leather:#3A2213; --leather-hi:#5A3820; --leather-ink:#E6C77E;
-  --sea:#1C2A2C; --sea-ink:#6E8F95;
-  --scott:#8DB3DE; --hunt:#A9C77A; --conrad:#D99BBC; --fleming:#E2B65E; --living:#8F8670; color-scheme:dark}
+  --desk:#0D1219; --paper:#161D28; --paper-2:#1E2734; --ink:#E8E6DF; --muted:#A5ABB6; --rule:#2E3A4B;
+  --gold:#D4AF5A; --green:#9FD0B2; --maroon:#E8A06E; --leather:#101A2B; --leather-hi:#22324D; --leather-ink:#E2C67E;
+  --sea:#172430; --sea-ink:#6E8F9E;
+  --scott:#8DB3DE; --hunt:#A9C77A; --conrad:#7FCBC4; --fleming:#E2B65E; --living:#8F95A0; --glow:rgba(141,179,222,.05); color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(56px + env(safe-area-inset-top,0px))}
@@ -44,13 +44,13 @@ nav.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:va
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:2px solid var(--gold)}
 nav.bar .in{max-width:940px;margin:0 auto;display:flex;align-items:center;gap:4px 18px;min-height:48px;flex-wrap:wrap}
 nav.bar .brand{font-family:var(--display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--leather-ink);margin-right:auto}
-nav.bar a{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#E9DCC0;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav.bar a{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#E8E6DF;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
 nav.bar a:hover,nav.bar a:focus-visible{color:var(--leather-ink);border-bottom-color:var(--leather-ink);outline:none}
 
 /* the book */
 .book{max-width:940px;margin:28px auto 0;display:grid;grid-template-columns:minmax(0,1fr);gap:30px}
-.page{position:relative;background:var(--paper);box-shadow:0 12px 30px rgba(40,24,10,.28);border-left:16px solid var(--leather);
-  background-image:radial-gradient(ellipse at 18% 8%,rgba(255,255,255,.28),transparent 55%),radial-gradient(ellipse at 92% 96%,rgba(139,111,58,.14),transparent 60%)}
+.page{position:relative;background:var(--paper);box-shadow:0 12px 30px rgba(10,18,32,.28);border-left:16px solid var(--leather);
+  background-image:radial-gradient(ellipse at 18% 8%,var(--glow),transparent 55%),radial-gradient(ellipse at 92% 96%,rgba(43,79,122,.08),transparent 60%)}
 .page::before{content:"";position:absolute;top:0;bottom:0;left:-16px;width:16px;background:linear-gradient(90deg,var(--leather) 0,var(--leather-hi) 55%,var(--leather) 100%)}
 .frame{margin:14px;border:3px double var(--gold);outline:1px solid var(--rule);outline-offset:-9px;padding:24px 44px 18px;position:relative;min-width:0}
 @media (max-width:640px){.page{border-left-width:8px}.page::before{left:-8px;width:8px}.frame{margin:8px;padding:20px 18px 14px}}
@@ -71,8 +71,8 @@ nav.bar a:hover,nav.bar a:focus-visible{color:var(--leather-ink);border-bottom-c
 .prose p{margin:0 0 14px}
 
 /* cover */
-.cover{display:grid;grid-template-columns:120px minmax(0,1fr);background:var(--leather);box-shadow:0 18px 40px rgba(30,16,6,.4);max-width:720px;margin-inline:auto;width:100%}
-.spine{background:linear-gradient(90deg,var(--leather) 0,var(--leather-hi) 48%,var(--leather) 100%);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:22px 6px;color:var(--leather-ink);gap:16px;border-right:3px solid #2A170B}
+.cover{display:grid;grid-template-columns:120px minmax(0,1fr);background:var(--leather);box-shadow:0 18px 40px rgba(10,18,32,.4);max-width:720px;margin-inline:auto;width:100%}
+.spine{background:linear-gradient(90deg,var(--leather) 0,var(--leather-hi) 48%,var(--leather) 100%);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:22px 6px;color:var(--leather-ink);gap:16px;border-right:3px solid #0B1424}
 .spine .band{width:80%;border-top:2px solid var(--leather-ink);border-bottom:2px solid var(--leather-ink);height:7px;opacity:.75}
 .spine .vt{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--display);font-weight:700;letter-spacing:.2em;font-size:13px;text-transform:uppercase}
 .spine .yr{font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.14em;text-align:center;line-height:1.7}
@@ -181,9 +181,9 @@ figure.doc .credit{font-size:11.5px;font-style:italic}
 .docs figure.doc{margin:0}
 .docs figure.doc img{height:240px;max-height:none}
 .docs figure.doc:first-child img{height:300px}
-.lightbox{position:fixed;inset:0;z-index:20;background:rgba(20,12,6,.94);display:grid;grid-template-rows:auto 1fr;padding:calc(10px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
-.lightbox .lbar{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#F3E6C6;font-family:var(--display);font-size:14px;padding-bottom:8px}
-.lightbox .lbar button{font:700 13px var(--display);letter-spacing:.08em;text-transform:uppercase;background:#E6C77E;color:#2C2418;border:0;padding:8px 14px;cursor:pointer}
+.lightbox{position:fixed;inset:0;z-index:20;background:rgba(8,12,20,.94);display:grid;grid-template-rows:auto 1fr;padding:calc(10px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lightbox .lbar{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#F7F4EC;font-family:var(--display);font-size:14px;padding-bottom:8px}
+.lightbox .lbar button{font:700 13px var(--display);letter-spacing:.08em;text-transform:uppercase;background:#E2C67E;color:#1B2A41;border:0;padding:8px 14px;cursor:pointer}
 .lightbox .stage{overflow:auto;-webkit-overflow-scrolling:touch;text-align:center}
 .lightbox .stage img{max-width:none;width:min(1400px,180%);height:auto;background:#fff}
 @media (min-width:900px){.lightbox .stage img{width:min(1400px,100%)}}
